@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:endColor="@color/sea_green_4" android:startColor="@color/sea_green_3" android:type="linear" />
+            <corners android:radius="@dimen/radius_main_button" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:endColor="@color/sea_green_2" android:startColor="@color/sea_green_1" android:type="linear" />
+            <corners android:radius="@dimen/radius_main_button" />
+        </shape>
+    </item>
+</selector>

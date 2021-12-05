@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_enormous">128dp</dimen>
+    <dimen name="spacing_large">64dp</dimen>
+    <dimen name="spacing_medium_large">48dp</dimen>
+    <dimen name="spacing_big">32dp</dimen>
+    <dimen name="spacing_default">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_smallest">2dp</dimen>
+
+    <!-- Radius -->
+    <dimen name="radius_main_button">32dp</dimen>
+
+    <!-- Font Size-->
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_subhead">16sp</dimen>
+    <dimen name="text_size_button">18sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_display">36sp</dimen>
+    <dimen name="text_size_display_regular">48sp</dimen>
+    <dimen name="text_size_subhead_regular">15sp</dimen>
+    <dimen name="text_size_body_regular">13sp</dimen>
+
+    <!-- Button Size -->
+    <dimen name="button_height_tall">60dp</dimen>
+    <dimen name="button_height_normal">52dp</dimen>
+    <dimen name="button_height_short">32dp</dimen>
+</resources>

@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+    <!-- Blue -->
+    <color name="blue_1">#0DA9FA</color>
+    <color name="blue_2">#0B96E0</color>
+    <color name="blue_3">#097CBA</color>
+    <color name="blue_4">#06527A</color>
+    <color name="blue_5">#03273B</color>
+
+    <!-- Light Blue -->
+    <color name="light_blue_1">#0CD8EB</color>
+    <color name="light_blue_2">#0BCEDE</color>
+    <color name="light_blue_3">#0AB5C4</color>
+    <color name="light_blue_4">#08929E</color>
+    <color name="light_blue_5">#05575E</color>
+
+    <!-- Sea Green -->
+    <color name="sea_green_1">#01F4C3</color>
+    <color name="sea_green_2">#00DBAF</color>
+    <color name="sea_green_3">#00B591</color>
+    <color name="sea_green_4">#00755E</color>
+    <color name="sea_green_5">#00362B</color>
+
+    <!-- Green -->
+    <color name="green_1">#0CEB7F</color>
+    <color name="green_2">#0BDE78</color>
+    <color name="green_3">#0AC46A</color>
+    <color name="green_4">#089E56</color>
+    <color name="green_54">#055E33</color>
+
+    <!-- Light Green -->
+    <color name="light_green_1">#0DFA44</color>
+    <color name="light_green_2">#0BE03D</color>
+    <color name="light_green_3">#09BA33</color>
+    <color name="light_green_4">#067A21</color>
+    <color name="light_green_5">#033B10</color>
+
+    <!-- Main -->
+    <color name="main_1">#0DA9FA</color>
+    <color name="main_2">#0CD8EB</color>
+    <color name="main_3">#01F4C3</color>
+    <color name="main_4">#0BDE78</color>
+    <color name="main_5">#0DFA44</color>
+
+    <!-- B&W -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_1">#CFCFCF</color>
+    <color name="gray_2">#808080</color>
+    <color name="gray_3">#3A3A3A</color>
 </resources>
