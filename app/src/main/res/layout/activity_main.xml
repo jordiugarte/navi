@@ -4,8 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/chualluma" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#70000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,20 +30,20 @@
 
     <Button
         android:id="@+id/button_login"
-        style="@style/main_button"
+        style="@style/button"
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/spacing_default"
-        android:text="Comenzar"
+        android:onClick="goToLogin"
+        android:text="@string/action_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/register_button" />
 
     <Button
         android:id="@+id/register_button"
-        style="@style/main_button"
+        style="@style/button.blue"
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/spacing_medium_large"
-        android:backgroundTint="@color/light_blue_1"
-        android:text="Crear cuenta"
+        android:text="@string/action_create_account"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

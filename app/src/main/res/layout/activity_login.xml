@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/text_title"
+        android:layout_marginTop="@dimen/button_height_normal"
+        android:text="@string/title_login"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/layout_social_networks"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/text_field.form"
+            android:layout_marginTop="@dimen/spacing_big"
+            android:hint="@string/noun_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/text_field.form"
+            android:layout_marginTop="@dimen/spacing_big"
+            android:hint="@string/noun_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/button.sea_green"
+            android:layout_marginTop="@dimen/spacing_big"
+            android:text="@string/action_login" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_forgot_password"
+        style="@style/text_clickable"
+        android:layout_marginBottom="@dimen/spacing_medium_large"
+        android:text="@string/question_forgot_password"
+        app:layout_constraintBottom_toTopOf="@id/layout_social_networks"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/layout_social_networks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_big"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            style="@style/outlined_button.social_network"
+            android:layout_marginBottom="@dimen/spacing_default"
+            android:text="@string/action_continue_with_google"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            style="@style/outlined_button.social_network"
+            android:text="@string/action_continue_with_facebook"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

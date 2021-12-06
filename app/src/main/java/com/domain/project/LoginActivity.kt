@@ -6,14 +6,10 @@ import android.os.Bundle
 import android.view.View
 import com.domain.project.utils.Router
 
-class MainActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-
-    fun goToLogin(view: View) {
-        Router.toLogin(this)
+        setContentView(R.layout.activity_login)
     }
 }

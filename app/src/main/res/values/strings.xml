@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Project Turismo</string>
+
+    <!-- Nouns -->
+    <string name="noun_email">Correo electrónico</string>
+    <string name="noun_password">Contraseña</string>
+
+    <!-- Actions -->
+    <string name="action_start">Comenzar</string>
+    <string name="action_create_account">Crear cuenta</string>
+    <string name="action_continue_with_facebook">Continuar con Facebook</string>
+    <string name="action_continue_with_google">Continuar con Google</string>
+    <string name="action_login">Iniciar sesión</string>
+
+    <!-- Titles -->
+    <string name="title_login">Inicio de sesión</string>
+
+    <!-- Questions -->
+    <string name="question_forgot_password">¿Olvidaste tu contraseña?</string>
 </resources>
