@@ -2,7 +2,7 @@ package com.navitech.navi.utils
 
 import android.content.Context
 import android.content.Intent
-import com.navitech.navi.ui.home.HomeActivity
+import com.navitech.navi.ui.home.MainActivity
 import com.navitech.navi.ui.login.LoginActivity
 
 class Router {
@@ -13,7 +13,7 @@ class Router {
         }
 
         fun toHome(context: Context) {
-            val intent = Intent(context, HomeActivity::class.java)
+            val intent = Intent(context, MainActivity::class.java)
             context.startActivity(intent)
         }
     }

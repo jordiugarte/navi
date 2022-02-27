@@ -4,46 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/main_3"
+    tools:context=".ui.home.MainActivity">
 
-    <ImageView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/chualluma" />
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="42dp">
 
-    <FrameLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_medium"
+                android:layout_marginTop="@dimen/spacing_enormous"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:gravity="center"
+                android:text="@string/banner_home"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_headline" />
+
+            <Button
+                android:id="@+id/register_button"
+                style="@style/button.search"
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:drawableStart="@drawable/ic_baseline_search_24"
+                android:text="@string/banner_plan_search"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/design_default_color_on_primary"
+                app:cardCornerRadius="@dimen/radius_main_button">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_default">
+
+                    <include layout="@layout/item_current_place" />
+
+                    <TextView
+                        style="@style/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Qué te interesa hacer?" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#70000000" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/spacing_big"
-        android:layout_marginTop="@dimen/spacing_biggest"
-        android:text="Bienvenido a Navi"
-        android:textColor="@color/white"
-        android:textSize="@dimen/text_size_display"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_login"
-        style="@style/button"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/spacing_default"
-        android:onClick="goToLogin"
-        android:text="@string/action_start"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/register_button" />
-
-    <Button
-        android:id="@+id/register_button"
-        style="@style/button.blue"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="@dimen/spacing_large"
-        android:text="@string/action_create_account"
-        app:layout_constraintBottom_toBottomOf="parent" />
-
+        app:menu="@menu/home_bottom_navigation_menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>
