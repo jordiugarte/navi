@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Project Turismo</string>
+    <string name="app_name">Navi</string>
 
     <!-- Nouns -->
     <string name="noun_email">Correo electrónico</string>
@@ -17,4 +17,17 @@
 
     <!-- Questions -->
     <string name="question_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <!-- Error Messages -->
+    <string name="error_message_login">No se pudo iniciar sesión. Contraseña o correo electrónico incorrectos.</string>
+
+    <!-- API Errors -->
+    <string name="api_error_login">Error de red. No se pudo iniciar sesión.</string>
+
+
+    <string name="action_wait">Por favor espere</string>
+    <string name="action_processing">Procesando...</string>
+    <string name="progress_message_updated">Información actualizada</string>
+    <string name="progress_message_error">Error al actualizar</string>
 </resources>

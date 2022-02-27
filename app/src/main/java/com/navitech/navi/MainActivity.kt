@@ -1,10 +1,9 @@
-package com.domain.project
+package com.navitech.navi
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.domain.project.utils.Router
+import com.navitech.navi.utils.Router
 
 class MainActivity : AppCompatActivity() {
 

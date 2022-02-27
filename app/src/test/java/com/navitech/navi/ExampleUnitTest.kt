@@ -1,4 +1,4 @@
-package com.domain.project
+package com.navitech.navi
 
 import org.junit.Test
 

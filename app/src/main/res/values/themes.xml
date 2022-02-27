@@ -14,5 +14,7 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/gray_3</item>
         <item name="fontFamily">@font/montserrat_regular</item>
+        <!-- Background forms color -->
+        <item name="android:panelColorBackground">@color/gray_1</item>
     </style>
 </resources>

@@ -68,7 +68,6 @@
 
     <!-- Text fields -->
     <style name="text_field" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeWidth">@dimen/spacing_smallest</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/button_height_tall</item>
         <item name="android:layout_marginStart">@dimen/spacing_big</item>
@@ -77,9 +76,12 @@
         <item name="android:insetBottom">0dp</item>
         <item name="android:contentInsetStart">0dp</item>
         <item name="android:contentInsetEnd">0dp</item>
-        <item name="boxStrokeColor">@color/sea_green_3</item>
+        <item name="android:strokeColor">@color/sea_green_3</item>
+        <item name="boxBackgroundColor">@color/gray_transparent</item>
         <item name="hintTextColor">@color/sea_green_3</item>
-        <item name="android:textColorHint">@color/sea_green_3</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="hintEnabled">true</item>
+        <item name="boxStrokeWidth">0dp</item>
     </style>
 
     <style name="text_field.form" parent="text_field">

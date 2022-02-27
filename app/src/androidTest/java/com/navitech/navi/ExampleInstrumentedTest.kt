@@ -1,4 +1,4 @@
-package com.domain.project
+package com.navitech.navi
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
