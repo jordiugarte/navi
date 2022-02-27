@@ -37,4 +37,6 @@
     <string name="action_processing">Procesando...</string>
     <string name="progress_message_updated">Información actualizada</string>
     <string name="progress_message_error">Error al actualizar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -2,7 +2,7 @@ package com.navitech.navi.utils
 
 import android.content.Context
 import android.content.Intent
-import com.navitech.navi.ui.home.MainActivity
+import com.navitech.navi.ui.main.MainActivity
 import com.navitech.navi.ui.login.LoginActivity
 
 class Router {

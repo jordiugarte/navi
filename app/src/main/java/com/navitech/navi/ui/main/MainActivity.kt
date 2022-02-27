@@ -1,4 +1,4 @@
-package com.navitech.navi.ui.home
+package com.navitech.navi.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.navitech.navi.ui.home.fragments
+package com.navitech.navi.ui.main.fragments.home
 
 import androidx.lifecycle.ViewModel
 
