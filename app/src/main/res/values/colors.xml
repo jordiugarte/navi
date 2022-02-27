@@ -29,7 +29,7 @@
     <color name="green_2">#0BDE78</color>
     <color name="green_3">#0AC46A</color>
     <color name="green_4">#089E56</color>
-    <color name="green_54">#055E33</color>
+    <color name="green_5">#055E33</color>
 
     <!-- Light Green -->
     <color name="light_green_1">#0DFA44</color>
@@ -43,7 +43,7 @@
     <color name="main_2">#0CD8EB</color>
     <color name="main_3">#01F4C3</color>
     <color name="main_4">#0BDE78</color>
-    <color name="main_5">#0DFA44</color>
+    <color name="main_5">#089E56</color>
 
     <!-- B&W -->
     <color name="white">#FFFFFF</color>
@@ -55,5 +55,8 @@
     <color name="gray_5">#303030</color>
     <color name="gray_6">#1E1E1E</color>
 
+    <color name="gray_blue">#F1F5FB</color>
     <color name="gray_transparent">#809A9A9A</color>
+
+    <color name="aaa"></color>
 </resources>

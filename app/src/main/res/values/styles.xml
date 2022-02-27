@@ -7,9 +7,9 @@
     </style>
 
     <!-- Buttons -->
-    <style name="button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+    <style name="button" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/button_height_normal</item>
+        <item name="android:layout_height">@dimen/button_height_tall</item>
         <item name="cornerRadius">@dimen/radius_main_button</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
@@ -29,6 +29,13 @@
         <item name="backgroundTint">@color/sea_green_3</item>
     </style>
 
+    <style name="button.search" parent="button">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/main_5</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
+        <item name="android:layout_height">@dimen/button_height_thin</item>
+    </style>
+
     <style name="outlined_button" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:layout_width">match_parent</item>
         <item name="cornerRadius">@dimen/radius_main_button</item>
@@ -44,7 +51,7 @@
 
     <style name="outlined_button.social_network" parent="outlined_button">
         <item name="strokeColor">@color/blue_1</item>
-        <item name="android:layout_height">@dimen/button_height_thin</item>
+        <item name="android:layout_height">@dimen/button_height_normal</item>
         <item name="android:textColor">@color/blue_1</item>
         <item name="android:textSize">@dimen/text_size_body</item>
     </style>
@@ -69,7 +76,7 @@
     <!-- Text fields -->
     <style name="text_field" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/button_height_tall</item>
+        <item name="android:layout_height">@dimen/button_height_extra_tall</item>
         <item name="android:layout_marginStart">@dimen/spacing_big</item>
         <item name="android:layout_marginEnd">@dimen/spacing_big</item>
         <item name="android:insetTop">0dp</item>
@@ -89,5 +96,9 @@
         <item name="boxCornerRadiusBottomStart">@dimen/radius_main_button</item>
         <item name="boxCornerRadiusTopEnd">@dimen/radius_main_button</item>
         <item name="boxCornerRadiusTopStart">@dimen/radius_main_button</item>
+    </style>
+
+    <style name="bottom_navigation" parent="Widget.MaterialComponents.BottomNavigationView">
+
     </style>
 </resources>
