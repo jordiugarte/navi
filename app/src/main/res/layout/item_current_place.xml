@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_current_location"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:backgroundTint="@color/black"
+    app:cardCornerRadius="@dimen/radius_main_button">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/spacing_default">
+
+        <TextView
+            android:id="@+id/item_current_place_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="La Paz"
+            android:textColor="@color/white"
+            android:textFontWeight="1000"
+            android:textSize="@dimen/text_size_display"
+            app:layout_constraintBottom_toTopOf="@id/item_current_place_country"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/item_current_place_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="Bolivia"
+            android:textColor="@color/white"
+            android:textFontWeight="1000"
+            android:textSize="@dimen/text_size_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/item_current_place_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="13:00"
+            android:textColor="@color/white"
+            android:textFontWeight="1000"
+            android:textSize="@dimen/text_size_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/item_current_place_climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="18° C"
+            android:textColor="@color/white"
+            android:textFontWeight="1000"
+            android:textSize="@dimen/text_size_display"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="Ubicación actual"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
