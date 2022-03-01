@@ -32,4 +32,7 @@
     <dimen name="button_height_normal">42dp</dimen>
     <dimen name="button_height_thin">36dp</dimen>
     <dimen name="button_height_short">32dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_default">12dp</dimen>
 </resources>

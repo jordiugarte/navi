@@ -43,6 +43,7 @@
         style="@style/button.blue"
         android:layout_width="match_parent"
         android:layout_marginBottom="@dimen/spacing_large"
+        android:onClick="goToRegister"
         android:text="@string/action_create_account"
         app:layout_constraintBottom_toBottomOf="parent" />
 

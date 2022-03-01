@@ -15,4 +15,8 @@ class InitialActivity : AppCompatActivity() {
     fun goToLogin(view: View) {
         Router.toLogin(this)
     }
+
+    fun goToRegister(view: View) {
+        Router.toRegister(this)
+    }
 }

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.register.fragments.type.TypePickerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="224dp"
+                android:layout_height="224dp"
+                android:layout_margin="@dimen/spacing_default"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/radius_main_button"
+                app:cardElevation="@dimen/elevation_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_blue"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_default">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|top"
+                        android:layout_weight="3"
+                        android:src="@drawable/icons8_rucksack_96" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:gravity="center"
+                        android:text="Viajero"
+                        android:textColor="@color/white"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/text_size_display" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="224dp"
+                android:layout_height="224dp"
+                android:layout_margin="@dimen/spacing_default"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="@dimen/radius_main_button"
+                app:cardElevation="@dimen/elevation_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient_green"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_default">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|top"
+                        android:layout_weight="3"
+                        android:src="@drawable/icons8_compass_96" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:gravity="center"
+                        android:text="Guía"
+                        android:textColor="@color/white"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/text_size_display" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

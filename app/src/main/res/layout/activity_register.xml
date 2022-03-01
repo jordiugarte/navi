@@ -16,27 +16,12 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <androidx.core.widget.NestedScrollView
+        <FrameLayout
+            android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/register_title">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="@dimen/spacing_default"
-                app:layout_constraintBottom_toBottomOf="@id/layout_social_networks"
-                app:layout_constraintTop_toBottomOf="@id/title">
-
-                <Button
-                    style="@style/button.sea_green"
-                    android:layout_marginTop="@dimen/spacing_big"
-                    android:onClick="login"
-                    android:text="@string/action_login" />
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
+            app:layout_constraintTop_toBottomOf="@id/register_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

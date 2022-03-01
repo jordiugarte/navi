@@ -19,7 +19,7 @@ import com.navitech.navi.utils.PermissionManager
 
 class MainActivity : AppCompatActivity(), LifecycleOwner {
 
-    val TAG: String = "MAIN"
+    private val TAG = "Main"
     val context: Context = this
     private lateinit var viewModel: ViewModel
 
