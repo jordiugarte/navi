@@ -18,6 +18,7 @@
 
     <!-- Titles -->
     <string name="title_login">Inicio de sesión</string>
+    <string name="title_register">Crear cuenta</string>
 
     <!-- Questions -->
     <string name="question_forgot_password">¿Olvidaste tu contraseña?</string>

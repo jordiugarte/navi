@@ -2,7 +2,6 @@ package com.navitech.navi.ui.main
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
