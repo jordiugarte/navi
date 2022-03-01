@@ -56,7 +56,6 @@
     <color name="gray_6">#1E1E1E</color>
 
     <color name="gray_blue">#F1F5FB</color>
-    <color name="gray_transparent">#809A9A9A</color>
+    <color name="gray_transparent">#669A9A9A</color>
 
-    <color name="aaa"></color>
 </resources>
