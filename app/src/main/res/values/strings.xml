@@ -4,10 +4,15 @@
     <!-- Nouns -->
     <string name="noun_email">Correo electrónico</string>
     <string name="noun_password">Contraseña</string>
-
+    <string name="noun_repeat_password">Repetir contraseña</string>
+    <string name="noun_names">Nombres</string>
+    <string name="noun_last_names">Apellidos</string>
+    <string name="noun_birth_date">Fecha de nacimiento</string>
     <string name="noun_home">Inicio</string>
     <string name="noun_profile">Perfil</string>
     <string name="noun_travels">Viajes</string>
+    <string name="noun_number">Numéro telefónico</string>
+    <string name="noun_country">País</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>
@@ -15,6 +20,10 @@
     <string name="action_continue_with_facebook">Continuar con Facebook</string>
     <string name="action_continue_with_google">Continuar con Google</string>
     <string name="action_login">Iniciar sesión</string>
+    <string name="action_wait">Por favor espere</string>
+    <string name="action_processing">Procesando...</string>
+    <string name="action_travel_and_destinies">Viajar y buscar destinos</string>
+    <string name="action_guidance">Ser guía turístico</string>
 
     <!-- Titles -->
     <string name="title_login">Inicio de sesión</string>
@@ -23,6 +32,8 @@
     <!-- Questions -->
     <string name="question_forgot_password">¿Olvidaste tu contraseña?</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="question_interest">¿Qué te interesa hacer con Navi?</string>
+    <string name="question_plan_search">¿Qué planes?</string>
 
     <!-- Error Messages -->
     <string name="error_message_login">No se pudo iniciar sesión. Contraseña o correo electrónico incorrectos.</string>
@@ -30,12 +41,10 @@
     <!-- API Errors -->
     <string name="api_error_login">Error de red. No se pudo iniciar sesión.</string>
 
-    <!-- Home -->
+    <!-- Banners -->
     <string name="banner_home">Una nueva aventura al alcance de tu mano</string>
-    <string name="banner_plan_search">¿Qué planes?</string>
+    <string name="banner_terms_and_services">Al crear una cuenta en Navi, acepto los términos y condiciones de servicio.</string>
 
-    <string name="action_wait">Por favor espere</string>
-    <string name="action_processing">Procesando...</string>
     <string name="progress_message_updated">Información actualizada</string>
     <string name="progress_message_error">Error al actualizar</string>
     <!-- TODO: Remove or change this placeholder text -->

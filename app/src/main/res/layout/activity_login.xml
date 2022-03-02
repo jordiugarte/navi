@@ -24,7 +24,7 @@
             app:layout_constraintTop_toBottomOf="@id/title">
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/text_field.form"
+                style="@style/text_field.credential"
                 android:layout_marginTop="@dimen/spacing_big"
                 android:hint="@string/noun_email">
 
@@ -36,7 +36,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/text_field.form"
+                style="@style/text_field.credential"
                 android:layout_marginTop="@dimen/spacing_big"
                 android:hint="@string/noun_password"
                 app:passwordToggleEnabled="true">
