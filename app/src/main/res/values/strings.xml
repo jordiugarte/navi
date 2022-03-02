@@ -8,11 +8,13 @@
     <string name="noun_names">Nombres</string>
     <string name="noun_last_names">Apellidos</string>
     <string name="noun_birth_date">Fecha de nacimiento</string>
+    <string name="noun_foundation_date">Fecha de fundación</string>
     <string name="noun_home">Inicio</string>
     <string name="noun_profile">Perfil</string>
     <string name="noun_travels">Viajes</string>
     <string name="noun_number">Numéro telefónico</string>
     <string name="noun_country">País</string>
+    <string name="noun_agency_name">Nombre de agencia</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>
@@ -34,6 +36,7 @@
     <string name="title_activity_maps">MapsActivity</string>
     <string name="question_interest">¿Qué te interesa hacer con Navi?</string>
     <string name="question_plan_search">¿Qué planes?</string>
+    <string name="question_agency">¿Representas una agencia de turismo?</string>
 
     <!-- Error Messages -->
     <string name="error_message_login">No se pudo iniciar sesión. Contraseña o correo electrónico incorrectos.</string>

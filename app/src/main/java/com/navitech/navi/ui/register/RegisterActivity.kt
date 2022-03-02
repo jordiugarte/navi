@@ -35,7 +35,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun initializeViews() {
-        replaceFragment(typePickerFragment)
+        replaceFragment(touristFragment)
     }
 
     private fun replaceFragment(fragment: Fragment) {

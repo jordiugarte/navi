@@ -15,9 +15,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:paddingVertical="@dimen/spacing_large"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@id/layout_social_networks"
             app:layout_constraintTop_toBottomOf="@id/title">
+
+            <Switch
+                style="@style/general_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/spacing_big"
+                android:text="@string/question_agency"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_agency_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/text_field.form"
@@ -48,6 +69,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_birth_date">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:inputType="date" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_foundation_date">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
