@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.navitech.navi.R
 import com.navitech.navi.ui.main.fragments.home.HomeFragment
@@ -17,11 +15,10 @@ import com.navitech.navi.ui.main.fragments.travels.TravelsFragment
 import com.navitech.navi.utils.Constants.LOCATION_REQUEST_CODE
 import com.navitech.navi.utils.PermissionManager
 
-class MainActivity : AppCompatActivity(), LifecycleOwner {
+class HomeActivity : AppCompatActivity(), LifecycleOwner {
 
-    private val TAG = "Main"
+    private val TAG = "Home"
     val context: Context = this
-    private lateinit var viewModel: ViewModel
 
     private lateinit var bottomNavigation: BottomNavigationView
 
@@ -31,9 +28,8 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
         checkPermissions()
-        initializeData()
         initializeViews()
     }
 
@@ -41,10 +37,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         if (!PermissionManager.checkLocationPermission(context)) {
             PermissionManager.requestLocationPermission(context)
         }
-    }
-
-    private fun initializeData() {
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
     }
 
     private fun initializeViews() {

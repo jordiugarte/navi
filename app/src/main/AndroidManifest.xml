@@ -37,7 +37,7 @@
             android:exported="true"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".ui.main.MainActivity"
+            android:name=".ui.main.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".ui.register.RegisterActivity"
