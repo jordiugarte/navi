@@ -18,6 +18,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectTurismo">
         <activity
+            android:name=".ui.AttractionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.place.PlaceActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.ProfileActivity"
             android:exported="true" />
         <!--

@@ -9,12 +9,14 @@ import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
 import com.navitech.navi.ui.main.fragments.home.adapter.RecommendationsAdapter
+import com.navitech.navi.utils.CurrentPlaceLayout
 import com.navitech.navi.utils.LayoutUtils
 
 class HomeFragment : Fragment() {
 
     private var recommendationsList: MutableList<String> = arrayListOf()
 
+    lateinit var fragmentView: View
     lateinit var recommendationsRecyclerView: RecyclerView
 
     companion object {
@@ -26,10 +28,10 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val parent: View = inflater.inflate(R.layout.home_fragment, container, false)
-        initViews(parent)
+        fragmentView = inflater.inflate(R.layout.home_fragment, container, false)
+        initViews(fragmentView)
         getData()
-        return parent
+        return fragmentView
     }
 
     private fun initViews(container: View) {
@@ -44,5 +46,6 @@ class HomeFragment : Fragment() {
 
     private fun setData() {
         recommendationsRecyclerView.adapter = RecommendationsAdapter(this.requireContext(), recommendationsList)
+        CurrentPlaceLayout(this.requireActivity(), fragmentView).setData()
     }
 }

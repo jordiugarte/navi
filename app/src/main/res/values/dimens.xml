@@ -13,8 +13,10 @@
 
     <!-- Radius -->
     <dimen name="radius_main_button">32dp</dimen>
+    <dimen name="radius_main_card">8dp</dimen>
 
     <!-- Font Size-->
+    <dimen name="text_size_body_small">10sp</dimen>
     <dimen name="text_size_caption">12sp</dimen>
     <dimen name="text_size_body">14sp</dimen>
     <dimen name="text_size_subhead">16sp</dimen>

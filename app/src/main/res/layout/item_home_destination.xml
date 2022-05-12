@@ -4,6 +4,7 @@
     android:layout_width="196dp"
     android:layout_height="196dp"
     android:layout_marginEnd="@dimen/spacing_default"
+    android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="@dimen/radius_main_button">
 
     <androidx.constraintlayout.widget.ConstraintLayout

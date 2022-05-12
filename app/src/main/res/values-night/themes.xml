@@ -15,6 +15,6 @@
         <item name="android:textColor">@color/white</item>
         <item name="fontFamily">@font/montserrat_regular</item>
         <!-- Background forms color -->
-        <item name="android:panelColorBackground">@color/gray_2</item>
+        <item name="android:panelColorBackground">#2B2B2B</item>
     </style>
 </resources>

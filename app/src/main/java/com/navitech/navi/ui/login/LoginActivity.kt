@@ -1,13 +1,14 @@
 package com.navitech.navi.ui.login
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import com.navitech.navi.R
+import com.navitech.navi.data.model.AppActivityController
+import com.navitech.navi.utils.LayoutUtils
 import com.navitech.navi.utils.Router
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppActivityController() {
 
     private val context = this
     private val TAG = "Login"
@@ -22,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        LayoutUtils.setToolbar(context)
         userField = findViewById(R.id.login_user_field)
         passwordField = findViewById(R.id.login_password_field)
     }
