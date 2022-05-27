@@ -14,6 +14,7 @@
     <!-- Radius -->
     <dimen name="radius_main_button">32dp</dimen>
     <dimen name="radius_main_card">8dp</dimen>
+    <dimen name="radius_circle">360dp</dimen>
 
     <!-- Font Size-->
     <dimen name="text_size_body_small">10sp</dimen>

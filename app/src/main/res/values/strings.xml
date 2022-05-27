@@ -15,6 +15,9 @@
     <string name="noun_number">Numéro telefónico</string>
     <string name="noun_country">País</string>
     <string name="noun_agency_name">Nombre de agencia</string>
+    <string name="noun_description">Description</string>
+    <string name="noun_biography">Biografía</string>
+    <string name="noun_interests">Intereses</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>
@@ -52,4 +55,7 @@
     <string name="progress_message_error">Error al actualizar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="lorem_impsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate eleifend risus ac sodales. Nulla dui mi, finibus a placerat et, condimentum vitae eros. Quisque id orci erat. Pellentesque dignissim dapibus ipsum, eget aliquet ex tempus et. Quisque nec sapien feugiat, accumsan mi volutpat, auctor dui. Donec luctus nisi lectus, quis vestibulum diam vestibulum at. Praesent auctor posuere libero. Mauris ante eros, blandit vel est in, consectetur ultrices magna. Duis a accumsan massa, porttitor consequat enim. Donec laoreet blandit convallis. Nullam faucibus maximus urna. Fusce mi turpis, varius quis tristique eget, lobortis ac odio. Sed posuere velit eu justo aliquet maximus. Donec a risus consectetur, cursus ipsum ac, ornare ligula.</string>
 </resources>

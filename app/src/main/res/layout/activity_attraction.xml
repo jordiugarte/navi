@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".ui.AttractionActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            app:cardElevation="@dimen/elevation_default">
+
+            <ImageView
+                android:id="@+id/attraction_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_default"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/noun_description" />
+
+            <TextView
+                android:id="@+id/attraction_description"
+                style="@style/body_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_impsum" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
