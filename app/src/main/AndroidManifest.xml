@@ -23,6 +23,9 @@
         android:theme="@style/Theme.ProjectTurismo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.CategoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.AttractionActivity"
             android:exported="false" />
         <activity

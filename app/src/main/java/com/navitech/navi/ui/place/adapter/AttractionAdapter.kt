@@ -4,10 +4,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
-import com.navitech.navi.ui.main.fragments.home.adapter.RecommendationsAdapter
 import com.navitech.navi.utils.Router
 
 class AttractionAdapter(val context: Context) :

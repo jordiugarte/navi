@@ -66,5 +66,4 @@ dependencies {
     implementation "com.parse:parse-android:1.17.3"
     implementation 'com.parse.bolts:bolts-tasks:1.4.0'
     implementation "com.parse:parse-android:1.17.3"
-    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.24.2"
 }

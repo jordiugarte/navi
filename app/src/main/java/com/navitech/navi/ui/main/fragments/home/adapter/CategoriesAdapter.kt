@@ -7,21 +7,27 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
+import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.utils.CategoryLocator
+import com.navitech.navi.utils.Router
 
-class RecommendationsAdapter(
+class CategoriesAdapter(
     private val context: Context,
-    private val data: MutableList<String>
-) : RecyclerView.Adapter<RecommendationsAdapter.ViewHolder>() {
+    private val data: MutableList<Category>
+) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_home_destination, parent, false)
+            .inflate(R.layout.item_home_category, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val recommendation: String = data[position]
-        holder.title.text = recommendation
+        val category: Category = data[position]
+        holder.title.text = CategoryLocator.getName(category, context)
+        holder.itemView.setOnClickListener {
+            Router.toCategory(context, category)
+        }
     }
 
     override fun getItemCount(): Int {

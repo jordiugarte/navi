@@ -1,4 +1,4 @@
-package com.navitech.navi.data.model;
+package com.navitech.navi.data.model.users;
 
 import static com.navitech.navi.utils.Constants.KEY_ADDRESS;
 import static com.navitech.navi.utils.Constants.KEY_BIRTH_DATE;
@@ -11,15 +11,16 @@ import static com.navitech.navi.utils.Constants.KEY_NAME;
 import static com.navitech.navi.utils.Constants.KEY_NATIONALITY;
 import static com.navitech.navi.utils.Constants.KEY_PHONE;
 
+import com.navitech.navi.data.model.GenericModel;
+import com.navitech.navi.data.model.attractions.Journey;
 import com.parse.ParseClassName;
-import com.parse.ParseObject;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @ParseClassName("User")
-public class User extends ParseObject implements Serializable {
+public class User extends GenericModel implements Serializable {
     public String getName() {
         return getString(KEY_NAME);
     }

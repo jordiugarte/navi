@@ -8,13 +8,14 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
-import com.navitech.navi.ui.main.fragments.home.adapter.RecommendationsAdapter
+import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.ui.main.fragments.home.adapter.CategoriesAdapter
 import com.navitech.navi.utils.CurrentPlaceLayout
 import com.navitech.navi.utils.LayoutUtils
 
 class HomeFragment : Fragment() {
 
-    private var recommendationsList: MutableList<String> = arrayListOf()
+    private var recommendationsList: MutableList<Category> = arrayListOf()
 
     lateinit var fragmentView: View
     lateinit var recommendationsRecyclerView: RecyclerView
@@ -39,13 +40,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun getData(){
-        recommendationsList.add("Tours")
-        recommendationsList.add("Caminatas")
+        for (i in 0 .. 9) {
+            recommendationsList.add(
+                Category(
+                    i
+                )
+            )
+        }
         setData()
     }
 
     private fun setData() {
-        recommendationsRecyclerView.adapter = RecommendationsAdapter(this.requireContext(), recommendationsList)
+        recommendationsRecyclerView.adapter = CategoriesAdapter(this.requireContext(), recommendationsList)
         CurrentPlaceLayout(this.requireActivity(), fragmentView).setData()
     }
 }

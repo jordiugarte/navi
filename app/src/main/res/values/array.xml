@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_names">
+        <item>@string/category_0</item>
+        <item>@string/category_1</item>
+        <item>@string/category_2</item>
+        <item>@string/category_3</item>
+        <item>@string/category_4</item>
+        <item>@string/category_5</item>
+        <item>@string/category_6</item>
+        <item>@string/category_7</item>
+        <item>@string/category_8</item>
+        <item>@string/category_9</item>
+    </string-array>
+
+    <string-array name="category_descriptions">
+        <item>@string/category_description_0</item>
+        <item>@string/category_description_1</item>
+        <item>@string/category_description_2</item>
+        <item>@string/category_description_3</item>
+        <item>@string/category_description_4</item>
+        <item>@string/category_description_5</item>
+        <item>@string/category_description_6</item>
+        <item>@string/category_description_7</item>
+        <item>@string/category_description_8</item>
+        <item>@string/category_description_9</item>
+    </string-array>
+</resources>

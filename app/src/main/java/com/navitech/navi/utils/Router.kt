@@ -2,11 +2,15 @@ package com.navitech.navi.utils
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
+import com.navitech.navi.data.model.attractions.Category
 import com.navitech.navi.ui.AttractionActivity
+import com.navitech.navi.ui.CategoryActivity
 import com.navitech.navi.ui.place.PlaceActivity
 import com.navitech.navi.ui.main.HomeActivity
 import com.navitech.navi.ui.login.LoginActivity
 import com.navitech.navi.ui.register.RegisterActivity
+import com.navitech.navi.utils.Constants.KEY_CATEGORY
 
 class Router {
     companion object {
@@ -32,6 +36,14 @@ class Router {
 
         fun toAttraction(context: Context) {
             val intent = Intent(context, AttractionActivity::class.java)
+            context.startActivity(intent)
+        }
+
+        fun toCategory(context: Context, category: Category) {
+            val intent = Intent(context, CategoryActivity::class.java)
+            val bundle = Bundle()
+            bundle.putSerializable(KEY_CATEGORY, category)
+            intent.putExtras(bundle)
             context.startActivity(intent)
         }
     }

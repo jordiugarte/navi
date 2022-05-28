@@ -56,6 +56,29 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
+    <!-- Misc -->
     <string name="lorem_impsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate eleifend risus ac sodales. Nulla dui mi, finibus a placerat et, condimentum vitae eros. Quisque id orci erat. Pellentesque dignissim dapibus ipsum, eget aliquet ex tempus et. Quisque nec sapien feugiat, accumsan mi volutpat, auctor dui. Donec luctus nisi lectus, quis vestibulum diam vestibulum at. Praesent auctor posuere libero. Mauris ante eros, blandit vel est in, consectetur ultrices magna. Duis a accumsan massa, porttitor consequat enim. Donec laoreet blandit convallis. Nullam faucibus maximus urna. Fusce mi turpis, varius quis tristique eget, lobortis ac odio. Sed posuere velit eu justo aliquet maximus. Donec a risus consectetur, cursus ipsum ac, ornare ligula.</string>
+
+    <!-- Categories -->
+    <string name="category_0">Caminatas</string>
+    <string name="category_1">Gran altitud</string>
+    <string name="category_2">Naturaleza y animales</string>
+    <string name="category_3">Culturales</string>
+    <string name="category_4">Gastronomía</string>
+    <string name="category_5">Viajes acuáticos</string>
+    <string name="category_6">Caminos interesantes</string>
+    <string name="category_7">Deportes extremos</string>
+    <string name="category_8">Escapadas (por definir)</string>
+    <string name="category_9">No te lo puedes perder</string>
+
+    <string name="category_description_0">Caminatas</string>
+    <string name="category_description_1">Gran altitud</string>
+    <string name="category_description_2">Naturaleza y animales</string>
+    <string name="category_description_3">Culturales</string>
+    <string name="category_description_4">Gastronomía</string>
+    <string name="category_description_5">Viajes acuáticos</string>
+    <string name="category_description_6">Caminos interesantes</string>
+    <string name="category_description_7">Deportes extremos</string>
+    <string name="category_description_8">Escapadas (por definir)</string>
+    <string name="category_description_9">No te lo puedes perder</string>
 </resources>

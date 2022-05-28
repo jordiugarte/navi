@@ -18,4 +18,8 @@ object Constants {
     @JvmField val KEY_CITY: String = "city"
     @JvmField val KEY_ID_DOCUMENT: String = "id_document"
     @JvmField val KEY_JOURNEYS: String = "journeys"
+    @JvmField val KEY_DESCRIPTION: String = "description"
+    @JvmField val KEY_ATTRACTION: String = "attraction"
+    @JvmField val KEY_TAG: String = "tag"
+    @JvmField val KEY_CATEGORY: String = "category"
 }
