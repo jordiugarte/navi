@@ -150,7 +150,7 @@
     </style>
 
     <style name="body_medium" parent="body">
-        <item name="android:textSize">@dimen/text_size_body_small</item>
+        <item name="android:textSize">@dimen/text_size_body</item>
     </style>
 
     <!-- Switches -->
