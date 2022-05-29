@@ -8,6 +8,8 @@
         android:layout_height="match_parent"
         tools:context=".ui.login.LoginActivity">
 
+        <include layout="@layout/toolbar_default" />
+
         <TextView
             android:id="@+id/register_title"
             style="@style/text_title"

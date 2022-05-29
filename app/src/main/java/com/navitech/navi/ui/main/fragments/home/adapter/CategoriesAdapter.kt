@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
-import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.data.model.travel.Category
 import com.navitech.navi.utils.CategoryLocator
 import com.navitech.navi.utils.Router
 

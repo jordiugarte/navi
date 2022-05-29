@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
-import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.data.model.travel.Category
 import com.navitech.navi.ui.main.fragments.home.adapter.CategoriesAdapter
 import com.navitech.navi.utils.CurrentPlaceLayout
 import com.navitech.navi.utils.LayoutUtils

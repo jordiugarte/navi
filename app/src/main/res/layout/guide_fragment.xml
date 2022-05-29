@@ -21,6 +21,7 @@
             app:layout_constraintTop_toBottomOf="@id/title">
 
             <Switch
+                android:id="@+id/guide_register_switch"
                 style="@style/general_switch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,9 +33,11 @@
                 style="@style/text_field.form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/noun_agency_name">
+                android:hint="@string/noun_agency_name"
+                android:visibility="gone">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/guide_register_agency_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -46,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_names">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -58,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_last_names">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -70,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_birth_date">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -81,9 +84,11 @@
                 style="@style/text_field.form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/noun_foundation_date">
+                android:hint="@string/noun_foundation_date"
+                android:visibility="gone">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/guide_register_agency_foundation_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -96,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_country">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -109,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_number">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -121,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/noun_email">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -134,7 +139,7 @@
                 android:hint="@string/noun_password"
                 app:passwordToggleEnabled="true">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -147,13 +152,14 @@
                 android:hint="@string/noun_repeat_password"
                 app:passwordToggleEnabled="true">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <CheckBox
+                android:id="@+id/checkbox_agreement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/spacing_big"
@@ -161,10 +167,12 @@
                 android:text="@string/banner_terms_and_services" />
 
             <Button
+                android:id="@+id/register_button"
                 style="@style/button.sea_green"
                 android:layout_marginTop="@dimen/spacing_big"
+                android:enabled="false"
                 android:onClick="login"
-                android:text="@string/action_login" />
+                android:text="@string/action_register" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

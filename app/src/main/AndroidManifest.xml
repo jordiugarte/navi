@@ -44,7 +44,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".ui.MapsActivity"
             android:exported="true"
             android:label="@string/title_activity_maps" />
         <activity
@@ -57,7 +57,7 @@
             android:name=".ui.login.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".InitialActivity"
+            android:name=".ui.main.InitialActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

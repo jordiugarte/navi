@@ -1,8 +1,9 @@
-package com.navitech.navi
+package com.navitech.navi.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.navitech.navi.R
 import com.navitech.navi.utils.Router
 
 class InitialActivity : AppCompatActivity() {

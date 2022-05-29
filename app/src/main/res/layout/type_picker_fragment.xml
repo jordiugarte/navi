@@ -33,6 +33,7 @@
                 android:layout_margin="@dimen/spacing_default"
                 android:layout_weight="1"
                 android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="goToTouristRegister"
                 app:cardCornerRadius="@dimen/radius_main_button"
                 app:cardElevation="@dimen/elevation_default">
 
@@ -68,6 +69,7 @@
                 android:layout_height="224dp"
                 android:layout_margin="@dimen/spacing_default"
                 android:layout_weight="1"
+                android:onClick="goToGuideRegister"
                 android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="@dimen/radius_main_button"
                 app:cardElevation="@dimen/elevation_default">

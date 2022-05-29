@@ -4,6 +4,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 public class GenericModel extends ParseObject {
+
     public boolean isEnabled() {
         return getBoolean("enabled");
     }

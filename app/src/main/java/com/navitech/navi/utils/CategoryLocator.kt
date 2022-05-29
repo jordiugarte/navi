@@ -2,7 +2,7 @@ package com.navitech.navi.utils
 
 import android.content.Context
 import com.navitech.navi.R
-import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.data.model.travel.Category
 import java.lang.Exception
 
 object CategoryLocator {

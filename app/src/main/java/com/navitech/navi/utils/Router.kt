@@ -3,7 +3,7 @@ package com.navitech.navi.utils
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.navitech.navi.data.model.attractions.Category
+import com.navitech.navi.data.model.travel.Category
 import com.navitech.navi.ui.AttractionActivity
 import com.navitech.navi.ui.CategoryActivity
 import com.navitech.navi.ui.place.PlaceActivity

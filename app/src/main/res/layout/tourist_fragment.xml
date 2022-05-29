@@ -121,6 +121,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <CheckBox
+                android:id="@+id/checkbox_agreement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/spacing_big"
@@ -128,10 +129,12 @@
                 android:text="@string/banner_terms_and_services" />
 
             <Button
+                android:id="@+id/register_button"
                 style="@style/button.sea_green"
                 android:layout_marginTop="@dimen/spacing_big"
-                android:onClick="login"
-                android:text="@string/action_login" />
+                android:enabled="false"
+                android:onClick="register"
+                android:text="@string/action_register" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -12,15 +12,16 @@ import static com.navitech.navi.utils.Constants.KEY_NATIONALITY;
 import static com.navitech.navi.utils.Constants.KEY_PHONE;
 
 import com.navitech.navi.data.model.GenericModel;
-import com.navitech.navi.data.model.attractions.Journey;
+import com.navitech.navi.data.model.travel.Journey;
 import com.parse.ParseClassName;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@ParseClassName("User")
+@ParseClassName("user")
 public class User extends GenericModel implements Serializable {
+
     public String getName() {
         return getString(KEY_NAME);
     }

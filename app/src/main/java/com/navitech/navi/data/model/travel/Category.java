@@ -1,4 +1,4 @@
-package com.navitech.navi.data.model.attractions;
+package com.navitech.navi.data.model.travel;
 
 import static com.navitech.navi.utils.Constants.KEY_DESCRIPTION;
 import static com.navitech.navi.utils.Constants.KEY_NAME;
@@ -6,12 +6,12 @@ import static com.navitech.navi.utils.Constants.KEY_TAG;
 
 import com.navitech.navi.data.model.GenericModel;
 import com.parse.ParseClassName;
-import com.parse.ParseObject;
 
 import java.io.Serializable;
 
 @ParseClassName("category")
 public class Category extends GenericModel implements Serializable {
+
     public Category(){}
 
     public Category(int tag) {

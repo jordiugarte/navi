@@ -25,6 +25,7 @@
     <string name="action_continue_with_facebook">Continuar con Facebook</string>
     <string name="action_continue_with_google">Continuar con Google</string>
     <string name="action_login">Iniciar sesión</string>
+    <string name="action_register">Registrarse</string>
     <string name="action_wait">Por favor espere</string>
     <string name="action_processing">Procesando...</string>
     <string name="action_travel_and_destinies">Viajar y buscar destinos</string>
