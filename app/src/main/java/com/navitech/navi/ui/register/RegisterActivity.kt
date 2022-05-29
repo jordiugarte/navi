@@ -43,13 +43,21 @@ class RegisterActivity : AppActivityController() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
+        backHandler()
+        return true
+    }
+
+    override fun onBackPressed() {
+        backHandler()
+    }
+
+    fun backHandler() {
         if (onType) {
-            onBackPressed()
+            super.onBackPressed()
         } else {
             onType = true
             replaceFragment(typePickerFragment)
         }
-        return true
     }
 
     private fun replaceFragment(fragment: Fragment) {

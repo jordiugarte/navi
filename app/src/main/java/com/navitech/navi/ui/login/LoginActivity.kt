@@ -5,8 +5,10 @@ import android.view.View
 import android.widget.EditText
 import com.navitech.navi.R
 import com.navitech.navi.data.model.AppActivityController
+import com.navitech.navi.data.model.users.User
 import com.navitech.navi.utils.LayoutUtils
 import com.navitech.navi.utils.Router
+import com.parse.LogInCallback
 
 class LoginActivity : AppActivityController() {
 
@@ -29,6 +31,15 @@ class LoginActivity : AppActivityController() {
     }
 
     fun login(view: View) {
-        Router.toHome(context)
+        User.logInInBackground(
+            userField.text.toString(),
+            passwordField.text.toString(),
+            LogInCallback { user, e ->
+                if (user != null) {
+                    Router.toHome(context)
+                } else {
+
+                }
+            })
     }
 }

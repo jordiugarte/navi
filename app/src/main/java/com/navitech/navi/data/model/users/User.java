@@ -14,13 +14,14 @@ import static com.navitech.navi.utils.Constants.KEY_PHONE;
 import com.navitech.navi.data.model.GenericModel;
 import com.navitech.navi.data.model.travel.Journey;
 import com.parse.ParseClassName;
+import com.parse.ParseUser;
 
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@ParseClassName("user")
-public class User extends GenericModel implements Serializable {
+@ParseClassName("User")
+public class User extends ParseUser implements Serializable {
 
     public String getName() {
         return getString(KEY_NAME);

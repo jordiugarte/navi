@@ -19,9 +19,9 @@ class App : Application() {
         ParseObject.registerSubclass(Preferences::class.java)
         Parse.initialize(
             Parse.Configuration.Builder(this)
-                .applicationId("YOUR_APP_ID") // if defined
-                .clientKey("YOUR_CLIENT_KEY")
-                .server("http://localhost:1337/parse/")
+                .applicationId("Wr4wdvm3IWenL6u57G44OrTZD5OLTO7f9SXCSLMI") // if defined
+                .clientKey("WTwI93veGQ1DyJcR89rboYV3O9RIFC7lLUDHSVS5")
+                .server("https://pg-app-2ro1edddvpndld0jjxh5e2g4cfhd0f.scalabl.cloud/1/")
                 .build()
         )
     }
