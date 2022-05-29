@@ -3,6 +3,7 @@ package com.navitech.navi.data.model.users;
 import static com.navitech.navi.utils.Constants.KEY_ADDRESS;
 import static com.navitech.navi.utils.Constants.KEY_BIRTH_DATE;
 import static com.navitech.navi.utils.Constants.KEY_CITY;
+import static com.navitech.navi.utils.Constants.KEY_COUNTRY;
 import static com.navitech.navi.utils.Constants.KEY_EMAIL;
 import static com.navitech.navi.utils.Constants.KEY_ID_DOCUMENT;
 import static com.navitech.navi.utils.Constants.KEY_JOURNEYS;
@@ -10,6 +11,7 @@ import static com.navitech.navi.utils.Constants.KEY_LAST_NAME;
 import static com.navitech.navi.utils.Constants.KEY_NAME;
 import static com.navitech.navi.utils.Constants.KEY_NATIONALITY;
 import static com.navitech.navi.utils.Constants.KEY_PHONE;
+import static com.navitech.navi.utils.Constants.KEY_USER_NAME;
 
 import com.navitech.navi.data.model.GenericModel;
 import com.navitech.navi.data.model.travel.Journey;
@@ -22,6 +24,14 @@ import java.util.List;
 
 @ParseClassName("User")
 public class User extends ParseUser implements Serializable {
+
+    public String getUsername() {
+        return getString(KEY_USER_NAME);
+    }
+
+    public void setUsername(String username) {
+        put(KEY_USER_NAME, username);
+    }
 
     public String getName() {
         return getString(KEY_NAME);
@@ -40,7 +50,7 @@ public class User extends ParseUser implements Serializable {
     }
 
     public Date getBirthDate() {
-        return getDate("birth_date");
+        return getDate(KEY_BIRTH_DATE);
     }
 
     public void setBirthDate(Date birthDate) {
@@ -48,7 +58,7 @@ public class User extends ParseUser implements Serializable {
     }
 
     public String getAddress() {
-        return getString("address");
+        return getString(KEY_ADDRESS);
     }
 
     public void  setAddress(String address) {
@@ -56,7 +66,7 @@ public class User extends ParseUser implements Serializable {
     }
 
     public String getEmail() {
-        return getString("email");
+        return getString(KEY_EMAIL);
     }
 
     public void setEmail(String email) {
@@ -64,23 +74,23 @@ public class User extends ParseUser implements Serializable {
     }
 
     public String getPhone() {
-        return getString("phone");
+        return getString(KEY_PHONE);
     }
 
     public void setPhone(String phone) {
         put(KEY_PHONE, phone);
     }
 
-    public String getNationality() {
-        return getString("nationality");
+    public String getCountry() {
+        return getString(KEY_COUNTRY);
     }
 
-    public void setNationality(String nationality) {
-        put(KEY_NATIONALITY, nationality);
+    public void setCountry(String country) {
+        put(KEY_COUNTRY, country);
     }
 
     public String getCity() {
-        return getString("city");
+        return getString(KEY_CITY);
     }
 
     public void setCity(String city) {
@@ -88,7 +98,7 @@ public class User extends ParseUser implements Serializable {
     }
 
     public String getIdDocument() {
-        return getString("id_document");
+        return getString(KEY_ID_DOCUMENT);
     }
 
     public void setIdDocument(String idDocument) {
@@ -96,7 +106,7 @@ public class User extends ParseUser implements Serializable {
     }
 
     public List<Journey> getJourneys() {
-        return getList("journeys");
+        return getList(KEY_JOURNEYS);
     }
 
     public void setJourneys(List<Journey> journeys) {

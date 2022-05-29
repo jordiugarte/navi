@@ -8,7 +8,7 @@ object Constants {
     val LOCATION_REQUEST_CODE = 100
 
     //  Keys
-    @JvmField val KEY_USER: String = "user"
+    @JvmField val KEY_USER_NAME: String = "username"
     @JvmField val KEY_NAME: String = "name"
     @JvmField val KEY_LAST_NAME: String = "last_name"
     @JvmField val KEY_BIRTH_DATE: String = "birth_date"
