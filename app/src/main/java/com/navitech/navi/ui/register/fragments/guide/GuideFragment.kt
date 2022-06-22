@@ -43,10 +43,16 @@ class GuideFragment : Fragment() {
         registerButton = view.findViewById(R.id.register_button)
         agencySwitch.setOnCheckedChangeListener { _, b ->
             (agencyName.parent.parent as TextInputLayout).visibility = if (b) VISIBLE else GONE
-            (agencyFoundationDate.parent.parent as TextInputLayout).visibility = if (b) VISIBLE else GONE
+            (agencyFoundationDate.parent.parent as TextInputLayout).visibility =
+                if (b) VISIBLE else GONE
         }
         agreement.setOnCheckedChangeListener { _, b ->
             registerButton.isEnabled = b
         }
+    }
+
+    fun validated(): Boolean {
+
+        return true
     }
 }

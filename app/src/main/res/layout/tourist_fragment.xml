@@ -27,6 +27,7 @@
                 android:hint="@string/noun_names">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -39,6 +40,7 @@
                 android:hint="@string/noun_last_names">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_last_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -51,6 +53,7 @@
                 android:hint="@string/noun_birth_date">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_born_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -64,6 +67,7 @@
                 android:hint="@string/noun_country">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
@@ -77,6 +81,7 @@
                 android:hint="@string/noun_number">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -89,6 +94,7 @@
                 android:hint="@string/noun_email">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -102,6 +108,7 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -115,6 +122,7 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_password2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />

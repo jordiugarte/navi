@@ -31,6 +31,17 @@
     <string name="action_travel_and_destinies">Viajar y buscar destinos</string>
     <string name="action_guidance">Ser guía turístico</string>
 
+    <!-- Error -->
+    <string name="error_unknown">Error desconocido</string>
+    <string name="error_invalid_names">Ingresa un nombre válido</string>
+    <string name="error_invalid_last_names">Ingresa un apellido válido</string>
+    <string name="error_empty_date">Ingresa una fecha</string>
+    <string name="error_empty_country">Ingresa un país</string>
+    <string name="error_invalid_phone">Ingresa un número válido</string>
+    <string name="error_invalid_email">Ingresa un correo válido</string>
+    <string name="error_invalid_password">La contraseña debe tener mínimo un número, un caracter especial y debe tener mayúsculas</string>
+    <string name="error_invalid_second_password">Las contraseñas no coinciden</string>
+
     <!-- Titles -->
     <string name="title_login">Inicio de sesión</string>
     <string name="title_register">Crear cuenta</string>

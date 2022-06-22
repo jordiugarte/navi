@@ -8,10 +8,14 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.navitech.navi.R
 import com.navitech.navi.data.model.AppActivityController
+import com.navitech.navi.data.model.users.User
+import com.navitech.navi.data.repositories.register.RemoteUserSaver
 import com.navitech.navi.ui.register.fragments.guide.GuideFragment
 import com.navitech.navi.ui.register.fragments.tourist.TouristFragment
 import com.navitech.navi.ui.register.fragments.type.TypePickerFragment
 import com.navitech.navi.utils.LayoutUtils
+import com.navitech.navi.utils.ProgressBarManager
+import com.parse.SaveCallback
 
 
 class RegisterActivity : AppActivityController() {
@@ -21,10 +25,11 @@ class RegisterActivity : AppActivityController() {
     private lateinit var auth: FirebaseAuth
 
     private var onType = true
+    private var onTourist = false;
 
     private var typePickerFragment: TypePickerFragment = TypePickerFragment()
-    var touristFragment: TouristFragment = TouristFragment()
-    var guideFragment: GuideFragment = GuideFragment()
+    private var touristFragment: TouristFragment = TouristFragment()
+    private var guideFragment: GuideFragment = GuideFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +56,7 @@ class RegisterActivity : AppActivityController() {
         backHandler()
     }
 
-    fun backHandler() {
+    private fun backHandler() {
         if (onType) {
             super.onBackPressed()
         } else {
@@ -74,33 +79,43 @@ class RegisterActivity : AppActivityController() {
 
     fun goToTouristRegister(view: View) {
         onType = false
+        onTourist = true
         replaceFragment(touristFragment)
     }
 
     fun goToGuideRegister(view: View) {
         onType = false
+        onTourist = false
         replaceFragment(guideFragment)
     }
 
     fun register(view: View) {
-
+        if (validated()) {
+            createAccount()
+        }
     }
 
-    private fun createAccount(email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
-                    Log.d(TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
-                } else {
-                    // If sign in fails, display a message to the user.
-                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(
-                        baseContext, "Authentication failed.",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    //updateUI(null)
-                }
+    private fun validated(): Boolean {
+        return if (onTourist) {
+            touristFragment.validated()
+        } else {
+            touristFragment.validated()
+        }
+    }
+
+    private fun createAccount() {
+        ProgressBarManager.show(context)
+        RemoteUserSaver().save(generateUser()) {
+            ProgressBarManager.hide()
+            if (it == null) {
+
+            } else {
+
             }
+        }
+    }
+
+    private fun generateUser(): User {
+        return User()
     }
 }
