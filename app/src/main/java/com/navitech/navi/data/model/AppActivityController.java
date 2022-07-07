@@ -13,6 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AppActivityController extends AppCompatActivity {
 
+    public String activityName;
+
+    public void setActivityName(int activityName) {
+        this.activityName = getString(activityName);
+    }
+
     public Application getApp() {
         return this.getApplication();
     }

@@ -17,4 +17,7 @@
         <!-- Background forms color -->
         <item name="android:panelColorBackground">#2B2B2B</item>
     </style>
+    <style name="dialog_theme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/gray_5</item>
+    </style>
 </resources>

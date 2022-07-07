@@ -2,10 +2,10 @@
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <solid android:color="@color/gray_3" />
+    <solid android:color="@color/gray_0" />
 
-    <corners android:radius="10dp" />
+    <corners android:radius="@dimen/radius_default" />
 
-    <padding android:left="15dp" android:top="15dp" android:right="15dp" android:bottom="15dp"/>
+    <padding android:left="@dimen/spacing_default" android:top="@dimen/spacing_default" android:right="@dimen/spacing_default" android:bottom="@dimen/spacing_default"/>
 
 </shape>

@@ -13,6 +13,7 @@
 
     <!-- Radius -->
     <dimen name="radius_main_button">32dp</dimen>
+    <dimen name="radius_default">16dp</dimen>
     <dimen name="radius_main_card">8dp</dimen>
     <dimen name="radius_circle">360dp</dimen>
 

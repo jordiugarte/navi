@@ -32,4 +32,9 @@ object Constants {
     @JvmField val KEY_PARTICIPANTS: String = "participants"
     @JvmField val KEY_SUB_TOTAL: String = "sub_total"
     @JvmField val KEY_INTERESTS: String = "interests"
+
+    const val KEY_SHARED_PREFS = "shared preferences"
+    const val KEY_CURRENT_EMAIL = "current email"
+    const val KEY_CURRENT_PASSWORD = "current password"
+    const val KEY_AUTO_LOGIN = "auto login"
 }

@@ -18,6 +18,9 @@
     <string name="noun_description">Description</string>
     <string name="noun_biography">Biografía</string>
     <string name="noun_interests">Intereses</string>
+    <string name="noun_phone">Teléfono</string>
+    <string name="noun_address">Dirección</string>
+    <string name="noun_products">Productos</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>
@@ -30,6 +33,8 @@
     <string name="action_processing">Procesando...</string>
     <string name="action_travel_and_destinies">Viajar y buscar destinos</string>
     <string name="action_guidance">Ser guía turístico</string>
+    <string name="action_accept">Aceptar</string>
+    <string name="action_cancel">Cancelar</string>
 
     <!-- Error -->
     <string name="error_unknown">Error desconocido</string>

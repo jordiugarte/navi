@@ -105,14 +105,13 @@ class RegisterActivity : AppActivityController() {
 
     private fun createAccount() {
         ProgressBarManager.show(context)
-        RemoteUserSaver().save(generateUser()) {
-            ProgressBarManager.hide()
+        RemoteUserSaver().save(generateUser(), SaveCallback {
             if (it == null) {
 
             } else {
 
             }
-        }
+        })
     }
 
     private fun generateUser(): User {
