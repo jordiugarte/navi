@@ -1,4 +1,4 @@
-package com.navitech.navi.data.repositories
+package com.navitech.navi.data.repositories.category
 
 import com.navitech.navi.data.model.travel.Category
 import com.parse.FindCallback

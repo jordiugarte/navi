@@ -78,10 +78,50 @@
                 style="@style/text_field.form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="@string/noun_city">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="@string/noun_number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tourist_register_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_ci">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -98,6 +138,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tourist_register_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout

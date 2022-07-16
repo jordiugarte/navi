@@ -19,6 +19,18 @@ class GuideFragment : Fragment() {
     lateinit var agencySwitch: Switch
     lateinit var agencyName: EditText
     lateinit var agencyFoundationDate: EditText
+    lateinit var names: EditText
+    lateinit var lastNames: EditText
+    lateinit var date: EditText
+    lateinit var country: EditText
+    lateinit var city: EditText
+    lateinit var phone: EditText
+    lateinit var ci: EditText
+    lateinit var email: EditText
+    lateinit var username: EditText
+    lateinit var password: EditText
+    lateinit var password2: EditText
+
     lateinit var agreement: CheckBox
     lateinit var registerButton: Button
 

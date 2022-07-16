@@ -17,7 +17,7 @@ public class Preferences extends GenericModel implements Serializable {
         return getParseUser("User");
     }
 
-    public void setUser(User user) {
+    public void setUser(Account user) {
         put("User", user);
     }
 

@@ -50,6 +50,13 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/profile_name"
+                    style="@style/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/noun_biography" />
+
+                <TextView
                     style="@style/sub_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.elevation.SurfaceColors
 import com.navitech.navi.R
 import com.navitech.navi.ui.main.fragments.home.HomeFragment
 import com.navitech.navi.ui.main.fragments.profile.ProfileFragment

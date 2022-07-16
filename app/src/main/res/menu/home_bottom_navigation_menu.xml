@@ -12,6 +12,6 @@
     <item
         android:id="@+id/menu_profile"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_profile_24"
+        android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/noun_profile"/>
 </menu>

@@ -1,7 +1,6 @@
 package com.navitech.navi.data.repositories.category
 
 import com.navitech.navi.data.model.travel.Category
-import com.navitech.navi.data.repositories.CategoryLoader
 import com.navitech.navi.utils.Constants.KEY_TAG
 import com.parse.FindCallback
 import com.parse.ParseQuery

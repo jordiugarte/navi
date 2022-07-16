@@ -3,6 +3,7 @@
 
     <!-- Nouns -->
     <string name="noun_email">Correo electrónico</string>
+    <string name="noun_username">Nombre de usuario</string>
     <string name="noun_password">Contraseña</string>
     <string name="noun_repeat_password">Repetir contraseña</string>
     <string name="noun_names">Nombres</string>
@@ -13,7 +14,9 @@
     <string name="noun_profile">Perfil</string>
     <string name="noun_travels">Viajes</string>
     <string name="noun_number">Numéro telefónico</string>
+    <string name="noun_ci">CI</string>
     <string name="noun_country">País</string>
+    <string name="noun_city">Ciudad</string>
     <string name="noun_agency_name">Nombre de agencia</string>
     <string name="noun_description">Description</string>
     <string name="noun_biography">Biografía</string>
@@ -39,6 +42,7 @@
     <!-- Error -->
     <string name="error_unknown">Error desconocido</string>
     <string name="error_invalid_names">Ingresa un nombre válido</string>
+    <string name="error_invalid_user">Ingresa un usuario un válido</string>
     <string name="error_invalid_last_names">Ingresa un apellido válido</string>
     <string name="error_empty_date">Ingresa una fecha</string>
     <string name="error_empty_country">Ingresa un país</string>

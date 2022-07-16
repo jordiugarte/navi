@@ -9,11 +9,17 @@ import com.navitech.navi.ui.CategoryActivity
 import com.navitech.navi.ui.place.PlaceActivity
 import com.navitech.navi.ui.main.HomeActivity
 import com.navitech.navi.ui.login.LoginActivity
+import com.navitech.navi.ui.main.InitialActivity
 import com.navitech.navi.ui.register.RegisterActivity
 import com.navitech.navi.utils.Constants.KEY_CATEGORY
 
 class Router {
     companion object {
+        fun toInitial(context: Context) {
+            val intent = Intent(context, InitialActivity::class.java)
+            context.startActivity(intent)
+        }
+
         fun toLogin(context: Context) {
             val intent = Intent(context, LoginActivity::class.java)
             context.startActivity(intent)

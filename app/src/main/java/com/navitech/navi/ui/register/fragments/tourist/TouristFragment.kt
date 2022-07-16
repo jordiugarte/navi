@@ -17,8 +17,12 @@ class TouristFragment : Fragment() {
     lateinit var lastNames: EditText
     lateinit var date: EditText
     lateinit var country: EditText
+    lateinit var city: EditText
+    lateinit var address: EditText
     lateinit var phone: EditText
+    lateinit var ci: EditText
     lateinit var email: EditText
+    lateinit var username: EditText
     lateinit var password: EditText
     lateinit var password2: EditText
 
@@ -43,8 +47,12 @@ class TouristFragment : Fragment() {
         lastNames = view.findViewById(R.id.tourist_register_last_name)
         date = view.findViewById(R.id.tourist_register_born_date)
         country = view.findViewById(R.id.tourist_register_country)
+        city = view.findViewById(R.id.tourist_register_city)
+        address = view.findViewById(R.id.tourist_register_address)
         phone = view.findViewById(R.id.tourist_register_phone)
+        ci = view.findViewById(R.id.tourist_register_id)
         email = view.findViewById(R.id.tourist_register_email)
+        username = view.findViewById(R.id.tourist_register_username)
         password = view.findViewById(R.id.tourist_register_password)
         password2 = view.findViewById(R.id.tourist_register_password2)
 
@@ -72,12 +80,24 @@ class TouristFragment : Fragment() {
             country.error = getString(R.string.error_empty_country)
             return false
         }
+        if (!Validator.notEmpty(city.text.toString())) {
+            city.error = getString(R.string.error_empty_country)
+            return false
+        }
+        if (!Validator.notEmpty(address.text.toString())) {
+            address.error = getString(R.string.error_empty_country)
+            return false
+        }
         if (!Validator.phone(phone.text.toString())) {
             phone.error = getString(R.string.error_invalid_phone)
             return false
         }
         if (!Validator.email(email.text.toString())) {
             email.error = getString(R.string.error_invalid_email)
+            return false
+        }
+        if (!Validator.notEmpty(username.text.toString())) {
+            username.error = getString(R.string.error_invalid_last_names)
             return false
         }
         if (!Validator.password(password.text.toString())) {

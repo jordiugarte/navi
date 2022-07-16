@@ -10,12 +10,12 @@
         <item name="colorSecondaryVariant">@color/blue_2</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/gray_3</item>
         <item name="fontFamily">@font/montserrat_regular</item>
         <!-- Background forms color -->
-        <item name="android:panelColorBackground">@color/gray_1</item>
+        <item name="android:panelColorBackground">@color/white</item>
     </style>
     <style name="dialog_theme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorPrimary">@color/gray_5</item>

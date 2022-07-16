@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -44,6 +45,10 @@ object LayoutUtils {
     }
 
     fun setImage(context: Activity, url: String, imageView: ImageView) {
-        Glide.with(context).load(url).into(imageView);
+        Glide.with(context).load(url).error(R.drawable.placeholder).into(imageView);
+    }
+
+    fun setImage(context: FragmentActivity, url: String, imageView: ImageView) {
+        Glide.with(context).load(url).error(R.drawable.placeholder).into(imageView);
     }
 }

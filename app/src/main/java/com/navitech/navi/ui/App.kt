@@ -1,21 +1,18 @@
 package com.navitech.navi.ui
 
 import android.app.Application
-import com.navitech.navi.data.local.LocalStorage
 import com.navitech.navi.data.model.travel.Attraction
 import com.navitech.navi.data.model.travel.Category
 import com.navitech.navi.data.model.travel.Journey
 import com.navitech.navi.data.model.users.Preferences
-import com.navitech.navi.data.model.users.User
-import com.navitech.navi.utils.Router
-import com.parse.LogInCallback
+import com.navitech.navi.data.model.users.Account
 import com.parse.Parse
 import com.parse.ParseObject
 
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
-        ParseObject.registerSubclass(User::class.java)
+        ParseObject.registerSubclass(Account::class.java)
         ParseObject.registerSubclass(Attraction::class.java)
         ParseObject.registerSubclass(Journey::class.java)
         ParseObject.registerSubclass(Category::class.java)
