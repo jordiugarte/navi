@@ -1,15 +1,14 @@
 package com.navitech.navi.ui.login
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import com.navitech.navi.R
-import com.navitech.navi.data.model.AppActivityController
 import com.navitech.navi.data.repositories.login.RemoteLogin
+import com.navitech.navi.ui.NaviActivity
 import com.navitech.navi.utils.*
 
-class LoginActivity : AppActivityController() {
+class LoginActivity : NaviActivity() {
 
     private val context = this
     private val TAG = "Login"
@@ -18,7 +17,7 @@ class LoginActivity : AppActivityController() {
     lateinit var passwordField: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.setActivityName(R.string.action_login)
+        super.setActivityTitle(R.string.action_login)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         initViews()
@@ -40,7 +39,7 @@ class LoginActivity : AppActivityController() {
                 } else {
                     DialogUtils().showDialog(
                         context,
-                        activityName,
+                        activityTitle,
                         getString(R.string.error_message_login)
                     )
                 }

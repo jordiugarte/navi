@@ -20,6 +20,19 @@
         <item name="android:textSize">@dimen/text_size_button</item>
     </style>
 
+    <style name="icon_button" parent="Widget.Material3.Button.IconButton">
+        <item name="android:backgroundTint">@color/light_blue_1</item>
+        <item name="cornerRadius">@dimen/radius_main_button</item>
+
+        <item name="android:contentInsetStart">0dp</item>
+        <item name="android:contentInsetEnd">0dp</item>
+        <item name="android:layout_width">@dimen/button_height_tall</item>
+        <item name="android:layout_height">@dimen/button_height_tall</item>
+        <item name="iconTint">@color/white</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+    </style>
+
     <style name="button.blue" parent="button">
         <item name="backgroundTint">@color/blue_1</item>
     </style>
@@ -126,10 +139,17 @@
         <item name="android:layout_margin">0dp</item>
     </style>
 
+    <style name="black_subtitle" parent="black_title">
+        <item name="android:textColor">?android:attr/textColor</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textSize">@dimen/text_size_button</item>
+    </style>
+
     <style name="sub_title">
         <item name="android:textColor">@color/main_1</item>
         <item name="fontFamily">@font/montserrat_bold</item>
-        <item name="android:textSize">@dimen/text_size_button</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
         <item name="android:layout_marginTop">@dimen/spacing_default</item>
     </style>
 
@@ -145,6 +165,7 @@
         <item name="android:textColor">?android:attr/textColor</item>
         <item name="fontFamily">@font/montserrat_light</item>
         <item name="android:layout_marginTop">@dimen/spacing_small</item>
+        <item name="android:autoLink">web</item>
     </style>
 
     <style name="body_small" parent="body">
@@ -167,5 +188,30 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:fontFamily">@font/montserrat_extra_bold</item>
         <item name="android:textSize">@dimen/text_size_headline</item>
+    </style>
+
+    <!-- Chips -->
+    <style name="chip" parent="ShapeAppearanceOverlay.Material3.Chip">
+        <item name="chipCornerRadius">@dimen/radius_circle</item>
+        <item name="android:textSize">@dimen/text_size_subhead</item>
+    </style>
+
+    <style name="chip_category" parent="chip">
+        <item name="chipStrokeColor">@color/blue_1</item>
+        <item name="android:textColor">@color/blue_1</item>
+    </style>
+
+    <style name="chip_rating_green" parent="chip">
+        <item name="chipStrokeColor">@color/sea_green_3</item>
+        <item name="chipCornerRadius">@dimen/radius_circle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor">@color/sea_green_3</item>
+    </style>
+
+    <style name="chip_rating_blue" parent="chip">
+        <item name="chipStrokeColor">@color/blue_1</item>
+        <item name="chipCornerRadius">@dimen/radius_circle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor">@color/blue_1</item>
     </style>
 </resources>

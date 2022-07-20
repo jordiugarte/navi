@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/spacing_small">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_guide_image"
+        android:layout_width="@dimen/image_small"
+        android:layout_height="@dimen/image_small"
+        android:layout_marginStart="@dimen/spacing_small"
+        android:src="@drawable/placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/item_rating_body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@id/chip_rating"
+        app:layout_constraintStart_toEndOf="@id/item_guide_image"
+        app:layout_constraintTop_toTopOf="@id/item_guide_image">
+
+        <TextView
+            android:id="@+id/item_guide_name"
+            style="@style/black_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="@dimen/text_size_body" />
+
+        <TextView
+            android:id="@+id/item_guide_subtitle"
+            style="@style/body_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMENTARIOS"
+            android:textSize="@dimen/text_size_caption" />
+    </LinearLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_rating"
+        style="@style/chip_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:text="4.3"
+        android:textSize="@dimen/text_size_body"
+        app:chipIcon="@drawable/ic_baseline_star_24"
+        app:chipIconTint="@color/blue_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/spacing_default"
+        android:background="@color/gray_1"
+        app:layout_constraintTop_toBottomOf="@id/item_rating_body" />
+</androidx.constraintlayout.widget.ConstraintLayout>

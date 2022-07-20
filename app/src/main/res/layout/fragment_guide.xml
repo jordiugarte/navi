@@ -50,7 +50,7 @@
                 android:hint="@string/noun_names">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_last_name"
+                    android:id="@+id/guide_register_names"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -63,6 +63,7 @@
                 android:hint="@string/noun_last_names">
 
                 <EditText
+                    android:id="@+id/guide_register_last_names"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords" />
@@ -75,10 +76,11 @@
                 android:hint="@string/noun_birth_date">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_born_date"
+                    android:id="@+id/guide_register_born_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:focusable="false"
                     android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,6 +96,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:focusable="false"
                     android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,11 +107,25 @@
                 android:hint="@string/noun_country">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_country"
+                    android:id="@+id/guide_register_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:focusable="false"
                     android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/text_field.form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/noun_ci">
+
+                <EditText
+                    android:id="@+id/guide_register_ci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -118,7 +135,7 @@
                 android:hint="@string/noun_number">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_phone"
+                    android:id="@+id/guide_register_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -131,7 +148,7 @@
                 android:hint="@string/noun_email">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_email"
+                    android:id="@+id/guide_register_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -144,7 +161,7 @@
                 android:hint="@string/noun_username">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_username"
+                    android:id="@+id/guide_register_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
@@ -158,7 +175,7 @@
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_password1"
+                    android:id="@+id/guide_register_password1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -172,7 +189,7 @@
                 app:passwordToggleEnabled="true">
 
                 <EditText
-                    android:id="@+id/guide_register_agency_password2"
+                    android:id="@+id/guide_register_password2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -191,7 +208,7 @@
                 style="@style/button.sea_green"
                 android:layout_marginTop="@dimen/spacing_big"
                 android:enabled="false"
-                android:onClick="login"
+                android:onClick="register"
                 android:text="@string/action_register" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

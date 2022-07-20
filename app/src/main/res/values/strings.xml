@@ -2,6 +2,7 @@
     <string name="app_name">Navi</string>
 
     <!-- Nouns -->
+    <string name="noun_error">Error</string>
     <string name="noun_email">Correo electrónico</string>
     <string name="noun_username">Nombre de usuario</string>
     <string name="noun_password">Contraseña</string>
@@ -18,12 +19,18 @@
     <string name="noun_country">País</string>
     <string name="noun_city">Ciudad</string>
     <string name="noun_agency_name">Nombre de agencia</string>
-    <string name="noun_description">Description</string>
+    <string name="noun_description">Descripción</string>
     <string name="noun_biography">Biografía</string>
     <string name="noun_interests">Intereses</string>
     <string name="noun_phone">Teléfono</string>
     <string name="noun_address">Dirección</string>
     <string name="noun_products">Productos</string>
+    <string name="noun_guide">Guía</string>
+    <string name="noun_ratings">Calificaciones</string>
+    <string name="noun_services">Servicios</string>
+    <string name="noun_location">Ubicación</string>
+    <string name="noun_available_dates">Fechas disponibles</string>
+    <string name="noun_more_lookalikes">Más similares</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>
@@ -38,6 +45,9 @@
     <string name="action_guidance">Ser guía turístico</string>
     <string name="action_accept">Aceptar</string>
     <string name="action_cancel">Cancelar</string>
+    <string name="action_reserve">Reservar</string>
+    <string name="action_search">Buscar</string>
+    <string name="action_select_an_option">Selecciona una opción</string>
 
     <!-- Error -->
     <string name="error_unknown">Error desconocido</string>
@@ -64,6 +74,7 @@
 
     <!-- Error Messages -->
     <string name="error_message_login">No se pudo iniciar sesión. Contraseña o correo electrónico incorrectos.</string>
+    <string name="error_message_register">No se pudo crear la cuenta. Inténtalo más tarde.</string>
 
     <!-- API Errors -->
     <string name="api_error_login">Error de red. No se pudo iniciar sesión.</string>

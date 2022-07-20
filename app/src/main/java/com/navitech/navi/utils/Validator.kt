@@ -2,8 +2,8 @@ package com.navitech.navi.utils
 
 object Validator {
 
-    private val REGEX_NAMES = "/^[a-z ,.'-]+\$/i".toRegex()
-    private val REGEX_NUMBER = "^\\d{10}$".toRegex()
+    private val REGEX_NAMES = "^[a-zA-Z\\\\s]+".toRegex()
+    private val REGEX_NUMBER = "[0-9]+".toRegex()
     private val REGEX_EMAIL = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}\$".toRegex()
     private val REGEX_PASSWORD = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%!\\-_?&])(?=\\S+\$).{8,}".toRegex()
 

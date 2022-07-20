@@ -38,9 +38,19 @@ object Constants {
     @JvmField val KEY_INTERESTS: String = "interests"
     @JvmField val KEY_PICTURE: String = "picture"
     @JvmField val KEY_BIOGRAPHY: String = "biography"
+    @JvmField val KEY_RESULT_VALUE: String = "result_value"
 
     const val KEY_SHARED_PREFS = "shared preferences"
     const val KEY_CURRENT_EMAIL = "current email"
     const val KEY_CURRENT_PASSWORD = "current password"
     const val KEY_AUTO_LOGIN = "auto login"
+
+    //  Request codes
+    const val REQUEST_CODE_COUNTRY = 0
+
+    fun LOCATIONS(): ArrayList<String> {
+        val locations = arrayListOf<String>()
+        locations.add("countries.json")
+        return locations
+    }
 }

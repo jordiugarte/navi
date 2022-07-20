@@ -35,10 +35,10 @@
             android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.CategoryActivity"
+            android:name=".ui.attraction.CategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.AttractionActivity"
+            android:name=".ui.attraction.AttractionActivity"
             android:exported="false" />
         <activity
             android:name=".ui.place.PlaceActivity"
@@ -70,6 +70,9 @@
             android:exported="true" />
         <activity
             android:name=".ui.main.InitialActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.general.SelectorActivity"
             android:exported="true" />
     </application>
 

@@ -51,47 +51,49 @@ class DialogUtils {
             .show()
     }
 
-    /*fun showDatePicker(context: Activity?, currentDate: Long, dateListener: OnDateSetListener?) {
-        val y: Int = DateFormats.dateInts(currentDate).get(0)
-        val m: Int = DateFormats.dateInts(currentDate).get(1)
-        val d: Int = DateFormats.dateInts(currentDate).get(2)
-        val datePicker = DatePickerDialog(
-            context!!, R.style.MyDialogTheme, dateListener, y, m, d
+    fun pickBornDatePicker(
+        context: Activity,
+        listener: OnDateSetListener
+    ) {
+        showDatePicker(
+            context,
+            System.currentTimeMillis() - 568080000000L - 86400000L,
+            System.currentTimeMillis() - 568080000000L,
+            listener
         )
-        datePicker.datePicker.minDate = System.currentTimeMillis()
-        datePicker.show()
     }
 
     fun showDatePicker(
-        context: Activity?,
+        context: Activity,
         currentDate: Long,
         minDate: Long,
-        dateListener: OnDateSetListener?
+        maxDate: Long,
+        listener: OnDateSetListener
     ) {
-        val datePicker = DatePickerDialog(
-            context!!,
-            R.style.MyDialogTheme,
-            dateListener,
-            DateFormats.dateInts(currentDate).get(0),
-            DateFormats.dateInts(currentDate).get(1),
-            DateFormats.dateInts(currentDate).get(2)
-        )
-        datePicker.datePicker.minDate = minDate + TimeUnit.DAYS.toMillis(1)
-        datePicker.datePicker.maxDate = minDate + TimeUnit.DAYS.toMillis(31)
-        datePicker.show()
+        val y = DateFormat.dateInts(currentDate)[0];
+        val m = DateFormat.dateInts(currentDate)[1];
+        val d = DateFormat.dateInts(currentDate)[2];
+        val datePicker: DatePickerDialog = DatePickerDialog(
+            context, R.style.dialog_theme, listener, y, m, d
+        );
+        datePicker.getDatePicker().minDate = minDate
+        datePicker.getDatePicker().maxDate = maxDate
+        datePicker.show();
     }
 
-    fun showTimePicker(context: Activity?, date: Long, timeListener: OnTimeSetListener?) {
-        val mHour = Date(date).hours
-        val mMinute = Date(date).minutes
-        val timePickerDialog = TimePickerDialog(
-            context, R.style.MyDialogTheme,
-            timeListener,
-            mHour,
-            mMinute,
-            true
-        )
-        timePickerDialog.setOnCancelListener { dialogInterface: DialogInterface -> dialogInterface.dismiss() }
-        timePickerDialog.show()
-    }*/
+    fun showDatePicker(
+        context: Activity,
+        currentDate: Long,
+        maxDate: Long,
+        listener: OnDateSetListener
+    ) {
+        val y = DateFormat.dateInts(currentDate)[0];
+        val m = DateFormat.dateInts(currentDate)[1];
+        val d = DateFormat.dateInts(currentDate)[2];
+        val datePicker = DatePickerDialog(
+            context, R.style.dialog_theme, listener, y, m, d
+        );
+        datePicker.getDatePicker().maxDate = maxDate
+        datePicker.show();
+    }
 }

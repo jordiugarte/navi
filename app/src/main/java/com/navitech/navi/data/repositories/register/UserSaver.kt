@@ -1,8 +1,8 @@
 package com.navitech.navi.data.repositories.register
 
-import com.navitech.navi.data.model.users.Account
+import com.navitech.navi.data.model.users.NewAccount
 import com.parse.SaveCallback
 
 interface UserSaver {
-    fun save(user: Account, callback: SaveCallback): Account
+    fun save(newAccount: NewAccount, callback: SaveCallback)
 }

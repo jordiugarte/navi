@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_default"
+    android:layout_marginVertical="@dimen/spacing_small">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal"
+        app:boxCornerRadiusBottomEnd="@dimen/radius_circle"
+        app:boxCornerRadiusBottomStart="@dimen/radius_circle"
+        app:boxCornerRadiusTopEnd="@dimen/radius_circle"
+        app:boxCornerRadiusTopStart="@dimen/radius_circle"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false">
+
+        <EditText
+            android:id="@+id/search_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/action_search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="@integer/max_length_answer"
+            android:padding="@dimen/spacing_small"
+            android:textColorHint="@color/gray_2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

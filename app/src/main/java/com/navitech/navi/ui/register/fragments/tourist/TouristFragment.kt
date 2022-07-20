@@ -8,13 +8,17 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.navitech.navi.R
-import com.navitech.navi.utils.Validator
+import com.navitech.navi.data.model.users.Account
+import com.navitech.navi.utils.*
+import java.util.*
 
 class TouristFragment : Fragment() {
 
-    lateinit var names: EditText
-    lateinit var lastNames: EditText
+    lateinit var name: EditText
+    lateinit var lastName: EditText
     lateinit var date: EditText
     lateinit var country: EditText
     lateinit var city: EditText
@@ -28,6 +32,16 @@ class TouristFragment : Fragment() {
 
     lateinit var agreement: CheckBox
     lateinit var registerButton: Button
+
+    var bornDateTimeStamp: Long = System.currentTimeMillis()
+    var bornDate: Date = Date(bornDateTimeStamp)
+
+    private val responseCountry =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            if (it.resultCode == AppCompatActivity.RESULT_OK) {
+                country.setText(it.data?.getStringExtra(Constants.KEY_RESULT_VALUE))
+            }
+        }
 
     companion object {
         fun newInstance() = TouristFragment()
@@ -43,8 +57,8 @@ class TouristFragment : Fragment() {
     }
 
     private fun initializeViews(view: View) {
-        names = view.findViewById(R.id.tourist_register_name)
-        lastNames = view.findViewById(R.id.tourist_register_last_name)
+        name = view.findViewById(R.id.tourist_register_name)
+        lastName = view.findViewById(R.id.tourist_register_last_name)
         date = view.findViewById(R.id.tourist_register_born_date)
         country = view.findViewById(R.id.tourist_register_country)
         city = view.findViewById(R.id.tourist_register_city)
@@ -61,15 +75,35 @@ class TouristFragment : Fragment() {
         agreement.setOnCheckedChangeListener { _, b ->
             registerButton.isEnabled = b
         }
+        date.setOnClickListener{
+            setBornDate(date)
+        }
+        country.setOnClickListener{
+            Router.toCountries(requireActivity(), responseCountry)
+        }
+    }
+
+    private fun setBornDate(view: EditText) {
+        DialogUtils().pickBornDatePicker(
+            requireActivity()
+        ) { view1, year, month, dayOfMonth ->
+            bornDate = DateFormat.dateFromParams(year, month, dayOfMonth)
+            bornDateTimeStamp = bornDate.getTime()
+            val stringDate = DateFormat.dateToString(
+                bornDateTimeStamp,
+                DateFormat.FORMAT_TYPE.ONLY_PRETTY_DATE
+            )
+            view.setText(stringDate)
+        }
     }
 
     fun validated(): Boolean {
-        if (!Validator.names(names.text.toString())) {
-            names.error = getString(R.string.error_invalid_names)
+        if (!Validator.names(name.text.toString())) {
+            name.error = getString(R.string.error_invalid_names)
             return false
         }
-        if (!Validator.names(lastNames.text.toString())) {
-            lastNames.error = getString(R.string.error_invalid_last_names)
+        if (!Validator.names(lastName.text.toString())) {
+            lastName.error = getString(R.string.error_invalid_last_names)
             return false
         }
         if (!Validator.notEmpty(date.text.toString())) {
@@ -104,10 +138,25 @@ class TouristFragment : Fragment() {
             password.error = getString(R.string.error_invalid_password)
             return false
         }
-        if (password.text.toString().equals(password2.text.toString())) {
+        if (!password.text.toString().equals(password2.text.toString())) {
             password2.error = getString(R.string.error_invalid_second_password)
             return false
         }
         return true
+    }
+
+    fun touristAccount(): Account {
+        return Account(
+            username.text.toString(),
+            name.text.toString(),
+            lastName.text.toString(),
+            Date(bornDateTimeStamp),
+            address.text.toString(),
+            email.text.toString(),
+            phone.text.toString(),
+            country.text.toString(),
+            city.text.toString(),
+            ci.text.toString()
+        )
     }
 }

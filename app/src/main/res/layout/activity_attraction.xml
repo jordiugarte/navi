@@ -4,43 +4,215 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AttractionActivity">
+    tools:context=".ui.attraction.AttractionActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="256dp"
-            app:cardElevation="@dimen/elevation_default">
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/reservation_dock"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/attraction_cover"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </androidx.cardview.widget.CardView>
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/spacing_large">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_large"
+                    app:cardElevation="@dimen/elevation_default">
+
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:fillColor="#FFFFFFFF"
+                        app:pageColor="#00000000"
+                        app:radius="6dp"
+                        app:slideInterval="3000"
+                        app:strokeColor="#FF777777"
+                        app:strokeWidth="1dp" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_default">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip_rating"
+                        style="@style/chip_rating_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.3"
+                        app:chipIcon="@drawable/ic_baseline_star_24"
+                        app:chipIconTint="@color/white" />
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/chip_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_guide" />
+
+                <include layout="@layout/item_guide" />
+
+                <include layout="@layout/item_line" />
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_ratings" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_description" />
+
+                <TextView
+                    android:id="@+id/attraction_description"
+                    style="@style/body_medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/spacing_default"
+                    android:text="@string/lorem_impsum" />
+
+                <include layout="@layout/item_line" />
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_services" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/item_line" />
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_location" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_large"
+                    android:layout_marginHorizontal="@dimen/spacing_default"
+                    app:cardCornerRadius="@dimen/radius_default"
+                    app:cardElevation="0dp">
+
+                    <com.google.android.gms.maps.MapView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </androidx.cardview.widget.CardView>
+
+                <include layout="@layout/item_line" />
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_available_dates" />
+
+                <CalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_large"
+                    android:layout_marginHorizontal="@dimen/spacing_default" />
+
+                <include layout="@layout/item_line" />
+
+                <TextView
+                    style="@style/sub_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_default"
+                    android:text="@string/noun_more_lookalikes" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
         <LinearLayout
+            android:id="@+id/reservation_dock"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/spacing_default"
-            android:orientation="vertical">
+            android:background="@color/white"
+            android:elevation="@dimen/elevation_default"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_default"
+            app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                style="@style/sub_title"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/noun_description" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/attraction_description"
-                style="@style/body_medium"
-                android:layout_width="match_parent"
+                <TextView
+                    style="@style/black_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="70Bs / persona" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21-26 de julio"
+                    android:textSize="@dimen/text_size_subhead" />
+            </LinearLayout>
+
+            <Button
+                style="@style/icon_button"
+                android:layout_marginHorizontal="@dimen/spacing_tiny"
+                android:backgroundTint="@color/blue_1"
+                app:icon="@drawable/ic_baseline_call_24" />
+
+            <Button
+                style="@style/button.sea_green"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/lorem_impsum" />
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_weight="1"
+                android:text="@string/action_reserve"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

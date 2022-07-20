@@ -1,23 +1,27 @@
 package com.navitech.navi.ui.register
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.navitech.navi.R
-import com.navitech.navi.data.model.AppActivityController
-import com.navitech.navi.data.model.users.Account
+import com.navitech.navi.data.model.users.NewAccount
 import com.navitech.navi.data.repositories.register.RemoteUserSaver
+import com.navitech.navi.ui.NaviActivity
 import com.navitech.navi.ui.register.fragments.guide.GuideFragment
 import com.navitech.navi.ui.register.fragments.tourist.TouristFragment
 import com.navitech.navi.ui.register.fragments.type.TypePickerFragment
-import com.navitech.navi.utils.DateFormat
+import com.navitech.navi.utils.Constants.KEY_RESULT_VALUE
+import com.navitech.navi.utils.Constants.REQUEST_CODE_COUNTRY
+import com.navitech.navi.utils.DialogUtils
 import com.navitech.navi.utils.LayoutUtils
 import com.navitech.navi.utils.ProgressBarManager
-import com.parse.SaveCallback
 
 
-class RegisterActivity : AppActivityController() {
+class RegisterActivity : NaviActivity() {
 
     private val context = this
     private val TAG = "Register"
@@ -98,7 +102,7 @@ class RegisterActivity : AppActivityController() {
         return if (onTourist) {
             touristFragment.validated()
         } else {
-            touristFragment.validated()
+            guideFragment.validated()
         }
     }
 
@@ -107,41 +111,32 @@ class RegisterActivity : AppActivityController() {
         RemoteUserSaver().save(generateUser()) {
             ProgressBarManager.hide()
             if (it == null) {
-
+                Toast.makeText(context, "New account created successfully", Toast.LENGTH_LONG)
+                    .show()
             } else {
-
+                DialogUtils().showDialog(
+                    context,
+                    getString(R.string.noun_error),
+                    getString(R.string.error_message_register)
+                )
             }
         }
     }
 
-    private fun generateUser(): Account {
+    private fun generateUser(): NewAccount {
         if (onTourist) {
-            return Account(
-                touristFragment.username.text.toString(),
-                touristFragment.names.text.toString(),
-                touristFragment.lastNames.text.toString(),
-                DateFormat.stringToDate(touristFragment.date.text.toString()),
-                touristFragment.address.text.toString(),
-                touristFragment.email.text.toString(),
-                touristFragment.phone.text.toString(),
-                touristFragment.country.text.toString(),
-                touristFragment.city.text.toString(),
-                touristFragment.ci.text.toString()
+            return NewAccount(
+                touristFragment.username.toString(),
+                touristFragment.email.toString(),
+                touristFragment.password.toString(),
+                touristFragment.touristAccount()
             )
         } else {
-            return Account(
-                guideFragment.username.text.toString(),
-                guideFragment.names.text.toString(),
-                guideFragment.lastNames.text.toString(),
-                DateFormat.stringToDate(guideFragment.date.text.toString()),
-                touristFragment.address.text.toString(),
-                guideFragment.email.text.toString(),
-                guideFragment.phone.text.toString(),
-                guideFragment.country.text.toString(),
-                guideFragment.city.text.toString(),
-                guideFragment.ci.text.toString(),
-                guideFragment.agencyName.text.toString(),
-                DateFormat.stringToDate(guideFragment.agencyFoundationDate.text.toString())
+            return NewAccount(
+                guideFragment.username.toString(),
+                guideFragment.email.toString(),
+                guideFragment.password.toString(),
+                guideFragment.guideAccount()
             )
         }
     }

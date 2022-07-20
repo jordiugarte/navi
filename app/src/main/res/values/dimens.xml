@@ -38,6 +38,11 @@
     <dimen name="button_height_thin">36dp</dimen>
     <dimen name="button_height_short">32dp</dimen>
 
+    <!-- Image Size -->
+    <dimen name="image_small">52dp</dimen>
+    <dimen name="image_medium">64dp</dimen>
+    <dimen name="image_large">256dp</dimen>
+
     <!-- Elevation -->
     <dimen name="elevation_default">12dp</dimen>
 </resources>
