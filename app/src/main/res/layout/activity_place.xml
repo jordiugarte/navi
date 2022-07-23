@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context=".ui.place.PlaceActivity">
 
+    <include layout="@layout/toolbar" />
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

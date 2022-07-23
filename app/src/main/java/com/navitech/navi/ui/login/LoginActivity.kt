@@ -17,7 +17,6 @@ class LoginActivity : NaviActivity() {
     lateinit var passwordField: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.setActivityTitle(R.string.action_login)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         initViews()
@@ -32,7 +31,7 @@ class LoginActivity : NaviActivity() {
     fun login(view: View) {
         if (validated()) {
             ProgressBarManager.show(context)
-            RemoteLogin().login(context, getEmail(), getPassword()) { user, e ->
+            RemoteLogin().login(context, getEmail(), getPassword()) { _, e ->
                 ProgressBarManager.hide()
                 if (e == null) {
                     Router.toHome(context)

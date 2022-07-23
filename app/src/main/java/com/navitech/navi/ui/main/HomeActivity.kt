@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleOwner
@@ -15,6 +16,7 @@ import com.navitech.navi.ui.main.fragments.profile.ProfileFragment
 import com.navitech.navi.ui.main.fragments.travels.TravelsFragment
 import com.navitech.navi.utils.Constants.LOCATION_REQUEST_CODE
 import com.navitech.navi.utils.PermissionManager
+import com.navitech.navi.utils.Router
 
 class HomeActivity : AppCompatActivity(), LifecycleOwner {
 
@@ -74,5 +76,9 @@ class HomeActivity : AppCompatActivity(), LifecycleOwner {
                 return
             }
         }
+    }
+
+    fun toPlace(view: View) {
+        Router.toPlace(context)
     }
 }

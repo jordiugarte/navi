@@ -10,7 +10,7 @@ class RemoteUserSaver : UserSaver {
         parseUser.username = newAccount.username
         parseUser.email = newAccount.email
         parseUser.setPassword(newAccount.password)
-        parseUser.saveInBackground {
+        parseUser.signUpInBackground() {
             if (it == null) {
                 newAccount.account.saveInBackground { e ->
                     if (e == null) {

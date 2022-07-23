@@ -1,7 +1,5 @@
 package com.navitech.navi.data.model.users;
 
-import com.parse.ParseUser;
-
 public class NewAccount {
     private final String username;
     private final String email;

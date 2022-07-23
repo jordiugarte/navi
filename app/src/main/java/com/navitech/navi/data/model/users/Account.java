@@ -171,6 +171,8 @@ public class Account extends ParseObject implements Serializable {
         setCity(city);
         setIdDocument(idDocument);
         setType(true);
+        setPicture("");
+        setBiography("");
     }
 
     public Account(String username, String names, String lastNames, Date birthDate, String address, String email, String phone, String country, String city, String idDocument, String agency, Date foundationDate) {
@@ -186,5 +188,7 @@ public class Account extends ParseObject implements Serializable {
         setAgency(agency);
         setFoundationDate(foundationDate);
         setType(false);
+        setPicture("");
+        setBiography("");
     }
 }

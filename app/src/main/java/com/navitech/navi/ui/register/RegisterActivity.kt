@@ -1,31 +1,25 @@
 package com.navitech.navi.ui.register
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
-import com.google.firebase.auth.FirebaseAuth
 import com.navitech.navi.R
 import com.navitech.navi.data.model.users.NewAccount
+import com.navitech.navi.data.repositories.login.RemoteLogin
 import com.navitech.navi.data.repositories.register.RemoteUserSaver
 import com.navitech.navi.ui.NaviActivity
 import com.navitech.navi.ui.register.fragments.guide.GuideFragment
 import com.navitech.navi.ui.register.fragments.tourist.TouristFragment
 import com.navitech.navi.ui.register.fragments.type.TypePickerFragment
-import com.navitech.navi.utils.Constants.KEY_RESULT_VALUE
-import com.navitech.navi.utils.Constants.REQUEST_CODE_COUNTRY
 import com.navitech.navi.utils.DialogUtils
 import com.navitech.navi.utils.LayoutUtils
 import com.navitech.navi.utils.ProgressBarManager
-
+import com.navitech.navi.utils.Router
 
 class RegisterActivity : NaviActivity() {
 
     private val context = this
-    private val TAG = "Register"
-    private lateinit var auth: FirebaseAuth
 
     private var onType = true
     private var onTourist = false;
@@ -109,11 +103,32 @@ class RegisterActivity : NaviActivity() {
     private fun createAccount() {
         ProgressBarManager.show(context)
         RemoteUserSaver().save(generateUser()) {
-            ProgressBarManager.hide()
             if (it == null) {
-                Toast.makeText(context, "New account created successfully", Toast.LENGTH_LONG)
+                Toast.makeText(
+                    context,
+                    getString(R.string.success_message_register),
+                    Toast.LENGTH_LONG
+                )
                     .show()
+                RemoteLogin().login(
+                    context,
+                    generateUser().email,
+                    generateUser().password
+                ) { _, e ->
+                    ProgressBarManager.hide()
+                    if (e == null) {
+                        Router.toHome(context)
+                    } else {
+                        DialogUtils().showDialog(
+                            context,
+                            activityTitle,
+                            getString(R.string.success_message_login)
+                        )
+                    }
+                }
+
             } else {
+                ProgressBarManager.hide()
                 DialogUtils().showDialog(
                     context,
                     getString(R.string.noun_error),
@@ -126,16 +141,16 @@ class RegisterActivity : NaviActivity() {
     private fun generateUser(): NewAccount {
         if (onTourist) {
             return NewAccount(
-                touristFragment.username.toString(),
-                touristFragment.email.toString(),
-                touristFragment.password.toString(),
+                touristFragment.username.text.toString(),
+                touristFragment.email.text.toString(),
+                touristFragment.password.text.toString(),
                 touristFragment.touristAccount()
             )
         } else {
             return NewAccount(
-                guideFragment.username.toString(),
-                guideFragment.email.toString(),
-                guideFragment.password.toString(),
+                guideFragment.username.text.toString(),
+                guideFragment.email.text.toString(),
+                guideFragment.password.text.toString(),
                 guideFragment.guideAccount()
             )
         }

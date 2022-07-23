@@ -72,9 +72,11 @@
     <string name="question_plan_search">¿Qué planes?</string>
     <string name="question_agency">¿Representas una agencia de turismo?</string>
 
-    <!-- Error Messages -->
+    <!-- Messages -->
     <string name="error_message_login">No se pudo iniciar sesión. Contraseña o correo electrónico incorrectos.</string>
+    <string name="success_message_login">Se inició sesión con éxito.</string>
     <string name="error_message_register">No se pudo crear la cuenta. Inténtalo más tarde.</string>
+    <string name="success_message_register">Se creó el usuario con éxito.</string>
 
     <!-- API Errors -->
     <string name="api_error_login">Error de red. No se pudo iniciar sesión.</string>
