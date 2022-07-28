@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.navitech.navi.R
+import com.navitech.navi.data.local.ParametersData
 import com.navitech.navi.data.model.travel.Category
-import com.navitech.navi.utils.CategoryLocator
 import com.navitech.navi.utils.Router
 
 class CategoriesAdapter(
@@ -24,7 +24,7 @@ class CategoriesAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val category: Category = data[position]
-        holder.title.text = CategoryLocator.getName(category, context)
+        holder.title.text = ParametersData().getCategoryName(category, context)
         holder.itemView.setOnClickListener {
             Router.toCategory(context, category)
         }

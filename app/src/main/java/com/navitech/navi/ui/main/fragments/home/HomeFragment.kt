@@ -81,4 +81,6 @@ class HomeFragment : Fragment() {
         recommendationsRecyclerView.adapter =
             CategoriesAdapter(this.requireContext(), recommendationsList)
     }
+
+    //TODO GPS params
 }

@@ -3,19 +3,23 @@ package com.navitech.navi.utils
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import androidx.activity.result.ActivityResultLauncher
 import com.navitech.navi.data.model.travel.Category
+import com.navitech.navi.data.model.travel.attraction.Attraction
 import com.navitech.navi.ui.attraction.AttractionActivity
 import com.navitech.navi.ui.attraction.CategoryActivity
+import com.navitech.navi.ui.general.ImageViewerActivity
 import com.navitech.navi.ui.general.SelectorActivity
 import com.navitech.navi.ui.login.LoginActivity
 import com.navitech.navi.ui.main.HomeActivity
 import com.navitech.navi.ui.main.InitialActivity
 import com.navitech.navi.ui.place.PlaceActivity
 import com.navitech.navi.ui.register.RegisterActivity
+import com.navitech.navi.utils.Constants.KEY_ATTRACTION
 import com.navitech.navi.utils.Constants.KEY_CATEGORY
-import com.navitech.navi.utils.Constants.REQUEST_CODE_COUNTRY
+import com.navitech.navi.utils.Constants.KEY_IMAGE
 
 class Router {
     companion object {
@@ -44,8 +48,11 @@ class Router {
             context.startActivity(intent)
         }
 
-        fun toAttraction(context: Context) {
+        fun toAttraction(context: Context, attraction: Attraction) {
             val intent = Intent(context, AttractionActivity::class.java)
+            val bundle = Bundle()
+            bundle.putSerializable(KEY_ATTRACTION, attraction)
+            intent.putExtras(bundle)
             context.startActivity(intent)
         }
 
@@ -60,6 +67,14 @@ class Router {
         fun toCountries(context: Activity, response: ActivityResultLauncher<Intent>) {
             val intent = Intent(context, SelectorActivity::class.java)
             response.launch(intent)
+        }
+
+        fun toImageView(context: Activity, image: Bitmap) {
+            val intent = Intent(context, ImageViewerActivity::class.java)
+            val bundle = Bundle()
+            bundle.putParcelable(KEY_IMAGE, image)
+            intent.putExtras(bundle)
+            context.startActivity(intent)
         }
     }
 }

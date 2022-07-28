@@ -11,6 +11,7 @@ import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.elevation.SurfaceColors
 import com.navitech.navi.R
+import com.navitech.navi.ui.NaviActivity
 import com.navitech.navi.ui.main.fragments.home.HomeFragment
 import com.navitech.navi.ui.main.fragments.profile.ProfileFragment
 import com.navitech.navi.ui.main.fragments.travels.TravelsFragment
@@ -18,7 +19,7 @@ import com.navitech.navi.utils.Constants.LOCATION_REQUEST_CODE
 import com.navitech.navi.utils.PermissionManager
 import com.navitech.navi.utils.Router
 
-class HomeActivity : AppCompatActivity(), LifecycleOwner {
+class HomeActivity : NaviActivity(), LifecycleOwner {
 
     private val TAG = "Home"
     val context: Context = this

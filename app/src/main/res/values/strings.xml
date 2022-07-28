@@ -31,6 +31,7 @@
     <string name="noun_location">Ubicación</string>
     <string name="noun_available_dates">Fechas disponibles</string>
     <string name="noun_more_lookalikes">Más similares</string>
+    <string name="noun_person">persona</string>
 
     <!-- Actions -->
     <string name="action_start">Comenzar</string>

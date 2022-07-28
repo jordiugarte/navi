@@ -23,6 +23,9 @@
         android:theme="@style/Theme.ProjectTurismo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.general.ImageViewerActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>

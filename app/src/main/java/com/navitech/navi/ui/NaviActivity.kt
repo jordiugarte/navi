@@ -2,11 +2,15 @@ package com.navitech.navi.ui
 
 import android.app.Application
 import android.graphics.Rect
+import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.color.DynamicColors
+import com.google.android.material.elevation.SurfaceColors
 import com.navitech.navi.utils.LayoutUtils
 
 
@@ -16,6 +20,12 @@ open class NaviActivity : AppCompatActivity() {
 
     val app: Application
         get() = this.application
+
+    override fun onResume() {
+        super.onResume()
+        DynamicColors.applyToActivityIfAvailable(this)
+        window.navigationBarColor = SurfaceColors.SURFACE_2.getColor(this)
+    }
 
     override fun onStop() {
         super.onStop()

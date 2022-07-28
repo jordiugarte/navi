@@ -1,8 +1,8 @@
 package com.navitech.navi.ui
 
 import android.app.Application
-import com.navitech.navi.data.model.travel.Attraction
 import com.navitech.navi.data.model.travel.Category
+import com.navitech.navi.data.model.travel.attraction.Attraction
 import com.navitech.navi.data.model.travel.Journey
 import com.navitech.navi.data.model.users.Preferences
 import com.navitech.navi.data.model.users.Account
